@@ -13,6 +13,7 @@ public class Category implements Serializable{
     @Column(name = "id_category")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     @Column(nullable = false,unique=true)
     private String name;
     @Transient
