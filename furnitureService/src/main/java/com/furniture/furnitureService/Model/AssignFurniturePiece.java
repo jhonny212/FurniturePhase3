@@ -1,4 +1,4 @@
-package com.furniture.furnitureService.Model;l;
+package com.furniture.furnitureService.Model;
 
 import javax.persistence.*;
 import java.io.Serializable;

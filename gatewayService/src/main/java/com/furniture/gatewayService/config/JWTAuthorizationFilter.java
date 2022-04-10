@@ -1,7 +1,7 @@
 package com.furniture.gatewayService.config;
 
-import com.furniture.gatewayService.Model.Profile;
 import com.furniture.gatewayService.Util.CONST;
+import com.furniture.gatewayService.Model.Profile;
 import io.jsonwebtoken.*;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
