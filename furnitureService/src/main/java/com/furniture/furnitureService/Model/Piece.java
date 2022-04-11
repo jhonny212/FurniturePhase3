@@ -19,7 +19,7 @@ public class Piece implements Serializable {
     private Integer id;
     @Column(nullable = false)
     private String name;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private double price;
     @Column(nullable = false)
     private Integer stock;
