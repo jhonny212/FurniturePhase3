@@ -5,31 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_15.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Model/AssignFurniturePiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Model/AssignFurniturePiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Model/reports/BestEarnerReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Model/reports/BestEarnerReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/config/JWTAuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salesReportService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salesReportService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,6 +207,8 @@
       <workItem from="1649527656151" duration="10920000" />
       <workItem from="1649630771805" duration="542000" />
       <workItem from="1649631341032" duration="815000" />
+      <workItem from="1649632256781" duration="538000" />
+      <workItem from="1649651756687" duration="1163000" />
     </task>
     <servers />
   </component>
