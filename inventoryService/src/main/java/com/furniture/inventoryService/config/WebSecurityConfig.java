@@ -14,11 +14,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable().authorizeRequests()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 //                .antMatchers(HttpMethod.POST, "/**").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/login").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/isAdminLoggedIn").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/isFabricatemanLoggedIn").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/isSalesmanLoggedIn").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/isLoggedIn").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilterBefore(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
