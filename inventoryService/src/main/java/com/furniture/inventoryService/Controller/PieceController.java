@@ -33,7 +33,7 @@ public class PieceController {
         if(result.hasErrors()){
                 throw new ResponseStatusException(HttpStatus.BAD_REQUEST,util.formatMessage(result));
         }
-        Piece tmp = PieceServiceImp.createPiece(piece);
+        Piece tmp = PieceServiceImp.createPiece(piece,true);
         if(tmp==null){
             return ResponseEntity.internalServerError().body(null);
         }
@@ -61,5 +61,28 @@ public class PieceController {
             return new ResponseEntity<>(null,HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(piece,HttpStatus.OK);
+    }
+
+    @PostMapping("/stock/{id}/{stock}/{cost}")
+    public ResponseEntity<Boolean> addInStock(
+        @PathVariable("id") int id, @PathVariable("stock") int stock,
+        @PathVariable("cost") double cost
+        ){
+        if(this.PieceServiceImp.addInStock(id,stock,cost)){
+            return ResponseEntity.ok().body(true);
+        }
+        return ResponseEntity.badRequest().body(false);
+    }
+
+    @PostMapping("/remove/{id}/{stock}")
+    public ResponseEntity<Boolean> removeInStokc(
+        @PathVariable("id") int id,
+        @PathVariable("stock") int stock
+        ){
+        boolean bool = this.PieceServiceImp.removeInStock(id,stock);
+        if(bool){
+            return ResponseEntity.ok().body(true);
+        }
+        return ResponseEntity.badRequest().body(false);
     }
 }
