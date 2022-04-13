@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_6_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Controller/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Repository/AuthenticationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/ServiceImp/AuthenticationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Model/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Model/Profile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -203,7 +210,7 @@
       <workItem from="1649631341032" duration="815000" />
       <workItem from="1649632256781" duration="538000" />
       <workItem from="1649651756687" duration="2685000" />
-      <workItem from="1649874838908" duration="646000" />
+      <workItem from="1649874838908" duration="3990000" />
     </task>
     <servers />
   </component>
