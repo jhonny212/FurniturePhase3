@@ -1,20 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/WebSecurityConfig.java" afterDir="false" />
+>>>>>>> 67f9b97ccae3f55d54315d63929e268a869e2f6d
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+>>>>>>> 67f9b97ccae3f55d54315d63929e268a869e2f6d
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="27XUrzLnJzCvdFXGcPgQRIX9f8R" />
   <component name="ProjectViewState">
@@ -22,13 +72,45 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService" />
+    <property name="nodejs_package_manager_path" value="npm" />
+>>>>>>> 67f9b97ccae3f55d54315d63929e268a869e2f6d
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\salesReportService\src\main\java\com\furniture\salesReportService" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\saleService\src\main\java\com\furniture\saleService" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\reportService\src\main\java\com\furniture\reportService" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\inventoryService\src\main\java\com\furniture\inventoryService" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\furnitureService\src\main\java\com\furniture\furnitureService" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.furniture.salesReportService.Util" />
+      <recent name="com.furniture.saleService.Util" />
+      <recent name="com.furniture.reportService.Util" />
+      <recent name="com.furniture.inventoryService.Util" />
+      <recent name="com.furniture.furnitureService.Util" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -40,6 +122,92 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="adminService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.adminService.AdminServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FurnitureServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="furnitureService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.furnitureService.FurnitureServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gatewayService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.gatewayService.GatewayServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="inventoryService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.inventoryService.InventoryServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="reportService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.reportService.ReportServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaleServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="saleService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.saleService.SaleServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SalesReportServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="salesReportService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.salesReportService.SalesReportServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.AdminServiceApplication" />
+      <item itemvalue="Spring Boot.FurnitureServiceApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.InventoryServiceApplication" />
+      <item itemvalue="Spring Boot.ReportServiceApplication" />
+      <item itemvalue="Spring Boot.SaleServiceApplication" />
+      <item itemvalue="Spring Boot.SalesReportServiceApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -50,13 +218,29 @@
       <option name="presentableId" value="Default" />
       <updated>1649466127631</updated>
       <workItem from="1649466129031" duration="69000" />
+<<<<<<< HEAD
       <workItem from="1649475448408" duration="801000" />
+=======
+      <workItem from="1649522938310" duration="1690000" />
+      <workItem from="1649527656151" duration="10920000" />
+      <workItem from="1649630771805" duration="542000" />
+      <workItem from="1649631341032" duration="815000" />
+      <workItem from="1649632256781" duration="538000" />
+      <workItem from="1649651756687" duration="1163000" />
+>>>>>>> 67f9b97ccae3f55d54315d63929e268a869e2f6d
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
+  </component>
+>>>>>>> 67f9b97ccae3f55d54315d63929e268a869e2f6d
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>

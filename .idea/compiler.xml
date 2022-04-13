@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="salesReportService" />
+        <module name="furnitureService" />
+        <module name="reportService" />
+        <module name="inventoryService" />
+        <module name="gatewayService" />
+        <module name="saleService" />
+        <module name="adminService" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="adminService" target="11" />
+      <module name="furnitureService" target="11" />
+      <module name="gatewayService" target="11" />
+      <module name="inventoryService" target="11" />
+      <module name="reportService" target="11" />
+      <module name="saleService" target="11" />
+      <module name="salesReportService" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="adminService" options="-parameters" />
+      <module name="furnitureService" options="-parameters" />
+      <module name="gatewayService" options="-parameters" />
+      <module name="inventoryService" options="-parameters" />
+      <module name="reportService" options="-parameters" />
+      <module name="saleService" options="-parameters" />
+      <module name="salesReportService" options="-parameters" />
+    </option>
+  </component>
+</project>

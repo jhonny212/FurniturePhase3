@@ -2,10 +2,11 @@ package com.furniture.inventoryService.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
-
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import java.io.Serializable;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
@@ -17,12 +18,16 @@ public class Piece implements Serializable {
     @Column(name = "id_piece")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @NotNull(message = "El nombre no debe estar nulo")
+    @NotBlank(message = "El nombre no debe estar vacio")
     @Column(nullable = false)
     private String name;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private double price;
+    @Size(min = 0,message = "Debe ingresar una cantidad mayor o igual a 0")
     @Column(nullable = false)
     private Integer stock;
+    @NotNull(message = "Debe registrar una categoria a la pieza")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_category",nullable = false)
     @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})

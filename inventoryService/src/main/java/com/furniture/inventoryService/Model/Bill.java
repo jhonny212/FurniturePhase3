@@ -1,4 +1,4 @@
-package com.furniture.inventoryService.Model;l;
+package com.furniture.inventoryService.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

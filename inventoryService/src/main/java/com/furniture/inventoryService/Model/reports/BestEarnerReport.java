@@ -1,4 +1,4 @@
-package com.furniture.inventoryService.Model.reports;s;
+package com.furniture.inventoryService.Model.reports;
 
 public class BestEarnerReport {
     private int idUsuario;
