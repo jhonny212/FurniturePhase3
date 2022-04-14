@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Controller/PlanController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Repository/AssignPlanPieceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Repository/PlanRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Service/AssignPlanPieceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Service/PlanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/AssignPlanPieceServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/PlanServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Controller/PieceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Controller/PieceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Repository/PieceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Repository/PieceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Service/PieceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Service/PieceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/CategoryServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/CategoryServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/PieceServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/PieceServiceImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +215,7 @@
       <workItem from="1649632256781" duration="538000" />
       <workItem from="1649651756687" duration="2685000" />
       <workItem from="1649874838908" duration="5111000" />
-      <workItem from="1649900751636" duration="15079000" />
+      <workItem from="1649900751636" duration="16946000" />
     </task>
     <servers />
   </component>

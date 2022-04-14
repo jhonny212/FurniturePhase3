@@ -6,7 +6,12 @@ import com.furniture.inventoryService.Repository.PieceRepository;
 import com.furniture.inventoryService.Repository.StockPieceRepository;
 import com.furniture.inventoryService.Service.PieceService;
 
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -91,4 +96,27 @@ public class PieceServiceImp implements PieceService{
         return false;
     }
 
+    @Override
+    public ResponseEntity<Page<Piece>> getAllPieces(Optional<Integer> pageNumber, Optional<String> name) {
+        return ResponseEntity.status(HttpStatus.OK).body(this.pieceRepository.findByNameContainsIgnoreCase(
+                name.orElse(""),
+                PageRequest.of(
+                        pageNumber.orElse(0),5
+                )
+        ));
+    }
+
+    @Override
+    public ResponseEntity<String> deletePiece(Integer id){
+        try{
+            this.pieceRepository.deleteById(id);
+            if(this.pieceRepository.existsById(id)){
+                return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body("No se eliminó la pieza correctamente");
+            }else{
+                return ResponseEntity.status(HttpStatus.OK).body("Se ha eliminado la pieza correctamente");
+            }
+        }catch(Exception ex){
+            return ResponseEntity.status(HttpStatus.FAILED_DEPENDENCY).body(ex.getMessage());
+        }
+    }
 }
