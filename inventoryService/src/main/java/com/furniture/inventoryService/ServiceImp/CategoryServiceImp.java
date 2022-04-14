@@ -48,7 +48,7 @@ public class CategoryServiceImp implements CategoryService{
                 return ResponseEntity.status(HttpStatus.OK).body("Se ha eliminado la categoria de la pieza correctamente");
             }
         }catch(Exception ex){
-            return ResponseEntity.status(HttpStatus.FAILED_DEPENDENCY).body(ex.getMessage());
+            return ResponseEntity.status(HttpStatus.PRECONDITION_REQUIRED).body(ex.getMessage());
         }
     }
 
