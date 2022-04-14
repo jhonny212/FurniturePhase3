@@ -2,13 +2,15 @@ package com.furniture.saleService.Controller;
 
 import com.furniture.saleService.Service.BillServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("sale/")
@@ -34,5 +36,15 @@ public class BillController {
             return ResponseEntity.internalServerError().body(null);
         }
         return ResponseEntity.ok().body(obj);
+    }
+
+    @GetMapping("/bill/best-earner")
+    public ResponseEntity<Object> getBestEarner(@RequestParam String initialDate, @RequestParam String finalDate){
+        return this.billServiceImp.getBestEarner(initialDate, finalDate);
+    }
+
+    @GetMapping("/bill/best-seller")
+    public ResponseEntity<Object> getBestSeller(@RequestParam String initialDate, @RequestParam String finalDate){
+        return this.billServiceImp.getBestSeller(initialDate, finalDate);
     }
 }

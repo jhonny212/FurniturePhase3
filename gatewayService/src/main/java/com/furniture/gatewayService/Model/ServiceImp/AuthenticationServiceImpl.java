@@ -1,4 +1,4 @@
-package com.furniture.gatewayService.ServiceImp;
+package com.furniture.gatewayService.Model.ServiceImp;
 
 import com.furniture.gatewayService.Model.Profile;
 import com.furniture.gatewayService.Repository.AuthenticationRepository;

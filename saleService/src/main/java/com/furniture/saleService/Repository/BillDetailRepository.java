@@ -33,4 +33,27 @@ public interface BillDetailRepository extends JpaRepository<BillDetails,Integer>
             "bill_details.id_furniture = ? " +
             ";", nativeQuery = true)
     Date getDetail(int id, int cod);
+
+    @Query(value="SELECT b.id_user, " +
+            "SUM(bd.price_sale - (bd.cost_lost + f.cost)) AS sales, " +
+            "p.first_name AS name, " +
+            "p.last_name AS surname " +
+            "FROM bill b RIGHT JOIN bill_details bd ON b.id_bill = bd.id_bill " +
+            "JOIN profile p ON p.id_user = b.id_user " +
+            "JOIN furniture f ON f.code = bd.id_furniture " +
+            "WHERE b.dateTime BETWEEN ? AND ? " +
+            "GROUP BY b.id_user, p.first_name, p.last_name " +
+            "ORDER BY sales DESC;", nativeQuery = true)
+    List<Object[]> getBestEarner(Date d1, Date d2);
+
+    @Query(value="SELECT b.id_user, " +
+            "COUNT(bd.id) AS sales, " +
+            "p.first_name AS name, " +
+            "p.last_name AS surname " +
+            "FROM bill b RIGHT JOIN bill_details bd ON b.id_bill = bd.id_bill " +
+            "JOIN profile p ON p.id_user = b.id_user " +
+            "WHERE b.dateTime BETWEEN ? AND ? " +
+            "GROUP BY b.id_user, p.first_name, p.last_name " +
+            "ORDER BY sales DESC;",nativeQuery = true)
+    List<Object[]> getBestSeller(Date d1, Date d2);
 }

@@ -31,22 +31,10 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException {
         configureCors(request, response);
-        try{
-            if(checkJWTToken(request, response)){
-                Claims claims = getClaimsFromToken(request.getHeader(CONST.AUTHORIZATION_HEADER.value()));
-                if(claims.get("authorities") != null){
-                    setUpSpringAuthentication(claims);
-                }else{
-                    SecurityContextHolder.clearContext();
-                }
-            }else{
-                SecurityContextHolder.clearContext();
-            }
+        try {
             chain.doFilter(request, response);
-        }catch(ExpiredJwtException | UnsupportedJwtException | MalformedJwtException | HttpMessageNotWritableException | ServletException e){
-            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-            response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
-            return;
+        } catch (ServletException e) {
+            e.printStackTrace();
         }
     }
 
