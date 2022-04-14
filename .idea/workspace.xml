@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Controller/PlanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Repository/AssignPlanPieceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Repository/PlanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Service/AssignPlanPieceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Service/PlanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/AssignPlanPieceServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/PlanServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/JWTAuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/JWTAuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/JWTAuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/JWTAuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/JWTAuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/JWTAuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +216,7 @@
       <workItem from="1649632256781" duration="538000" />
       <workItem from="1649651756687" duration="2685000" />
       <workItem from="1649874838908" duration="5111000" />
-      <workItem from="1649900751636" duration="12141000" />
+      <workItem from="1649900751636" duration="15079000" />
     </task>
     <servers />
   </component>
