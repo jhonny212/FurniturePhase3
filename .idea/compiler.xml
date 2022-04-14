@@ -8,8 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="salesReportService" />
-        <module name="furnitureService" />
         <module name="reportService" />
+        <module name="furnitureService" />
         <module name="inventoryService" />
         <module name="gatewayService" />
         <module name="saleService" />
