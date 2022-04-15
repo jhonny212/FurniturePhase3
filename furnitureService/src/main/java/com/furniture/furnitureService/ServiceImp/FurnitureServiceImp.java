@@ -1,10 +1,12 @@
 package com.furniture.furnitureService.ServiceImp;
 
-import com.furniture.furnitureService.Model.BillDetails;
-import com.furniture.furnitureService.Model.Furniture;
-import com.furniture.furnitureService.Repository.FurnitureRepository;
+import com.furniture.furnitureService.Model.*;
+import com.furniture.furnitureService.Repository.*;
 import com.furniture.furnitureService.Service.FurnitureService;
+import com.furniture.furnitureService.config.JWTAuthorizationFilter;
+import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -12,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 
@@ -26,6 +29,82 @@ public class FurnitureServiceImp implements FurnitureService {
 
     @Autowired
     private FurnitureRepository furnitureRepository;
+    @Autowired
+    private AssignPlanPieceRepository assignPlanPieceRepository;
+    @Autowired
+    private StockPieceRepository stockPieceRepository;
+    @Autowired
+    private PieceRepository pieceRepository;
+    @Autowired
+    private AssignFurniturePieceRepository assignFurniturePieceRepository;
+
+    public ResponseEntity<Furniture> postRegisterFurniture(Furniture furniture, MultipartFile file, String plan, String token) {
+
+        if (this.isExisteFurniture(furniture.getCode())){
+            furniture.msj = "Ya existe un Mueble con el mismo Codigo";
+            return new ResponseEntity<>(furniture,HttpStatus.BAD_REQUEST);
+        }
+
+        if(!file.isEmpty()){
+            //String nameFile = utilityService.saveFile(file,"src/main/resources/img/");
+            //furniture.setPath(nameFile);
+        }else{
+            furniture.setPath(null);
+        }
+
+        List<AssignPlanPiece> assignPlanPieces = this.assignPlanPieceRepository.findAllByPlan_Id(Integer.parseInt(plan));
+        List<StockPiece> stockPieceList=new ArrayList<>();
+        List<AssignFurniturePiece> assignFurniturePieceList = new ArrayList<>();
+        double costo_total = 0;
+        List<Piece> listP = new ArrayList<>();
+        for (int i = 0; i < assignPlanPieces.size(); i++) {
+            AssignPlanPiece a = assignPlanPieces.get(i);
+            int id = a.getPiece().getId();
+            int amount = assignPlanPieces.get(i).getAmount();
+            Piece pieceTmp = a.getPiece();
+            pieceTmp.setStock(pieceTmp.getStock()-amount);
+            List<StockPiece>  tmp = stockPieceRepository.findAllByPiece_IdAndStatus(id,0);
+            if(tmp.size()<amount){
+                furniture.msj = "No hay piezas suficientes para armar el mueble "+a.getPiece().getName();
+                return new ResponseEntity<>(furniture,HttpStatus.BAD_REQUEST);
+            }
+            for (int j = 0; j < amount; j++) {
+                tmp.get(j).setStatus(1);
+                stockPieceList.add(tmp.get(j));
+                costo_total+=tmp.get(j).getCost();
+                AssignFurniturePiece assignFurniturePiece = new AssignFurniturePiece();
+                assignFurniturePiece.setFurniture(furniture);
+                assignFurniturePiece.setStockPiece(tmp.get(j));
+                assignFurniturePieceList.add(assignFurniturePiece);
+            }
+        }
+        furniture.setCost(costo_total);
+        Furniture tmp = this.postFurniture(furniture);
+        if(tmp!=null && stockPieceList.size()!=0 ){
+            this.stockPieceRepository.saveAll(stockPieceList);
+            this.assignFurniturePieceRepository.saveAll(assignFurniturePieceList);
+            this.pieceRepository.saveAll(listP);
+            return new ResponseEntity<>(tmp,HttpStatus.OK);
+        }
+        furniture.msj  = "Error al crear mueble, intente de nuevo";
+        return new ResponseEntity<>(furniture,HttpStatus.BAD_REQUEST);
+    }
+
+    @Override
+    public Furniture postFurniture(Furniture furniture){
+        try{
+//            if (isExisteFurniture(furniture.getCode())){
+//                furniture.msj = "Ya existe un Mueble con el mismo Codigo";
+//                return furniture;
+//            }
+            return this.furnitureRepository.save(furniture);
+        }catch (DataIntegrityViolationException e){
+            furniture.msj = "Ocurrio un Error al Registrar el Mueble";
+            System.out.println(e);
+            return null;
+        }
+
+    }
 
     @Override
     public boolean putOnSale(Integer id) {
