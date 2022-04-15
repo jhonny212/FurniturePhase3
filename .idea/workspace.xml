@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_6_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Controller/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Repository/AuthenticationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Service/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/ServiceImp/AuthenticationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_6_6.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Model/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Model/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Controller/FurnitureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Controller/FurnitureController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +41,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -56,6 +54,9 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="27XUrzLnJzCvdFXGcPgQRIX9f8R" />
   <component name="ProjectViewState">
@@ -71,7 +72,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -97,7 +98,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
+  <component name="RunManager" selected="Spring Boot.FurnitureServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -109,12 +110,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in adminService" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="adminService" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="adminService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.adminService.AdminServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,9 +135,10 @@
     <configuration name="FurnitureServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="furnitureService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.furnitureService.FurnitureServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -134,9 +147,10 @@
     <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gatewayService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.gatewayService.GatewayServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,9 +159,10 @@
     <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="inventoryService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.inventoryService.InventoryServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,9 +171,10 @@
     <configuration name="ReportServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="reportService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.reportService.ReportServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,9 +183,10 @@
     <configuration name="SaleServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="saleService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.saleService.SaleServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -178,18 +195,20 @@
     <configuration name="SalesReportServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="salesReportService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.furniture.salesReportService.SalesReportServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
+        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.All in adminService" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.AdminServiceApplication" />
       <item itemvalue="Spring Boot.FurnitureServiceApplication" />
-      <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.InventoryServiceApplication" />
       <item itemvalue="Spring Boot.ReportServiceApplication" />
       <item itemvalue="Spring Boot.SaleServiceApplication" />
@@ -213,6 +232,7 @@
       <workItem from="1649632256781" duration="538000" />
       <workItem from="1649651756687" duration="2685000" />
       <workItem from="1649874838908" duration="3990000" />
+      <workItem from="1649899141419" duration="4574000" />
     </task>
     <servers />
   </component>
