@@ -1,5 +1,6 @@
 package com.furniture.saleService.Service;
 
+import com.furniture.saleService.Model.BillData;
 import com.furniture.saleService.Model.BillDetails;
 import com.furniture.saleService.Model.Furniture;
 import com.furniture.saleService.Model.OnSaleData;
@@ -12,6 +13,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,6 +21,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Optional;
@@ -106,5 +109,36 @@ public class FurnitureServiceImp implements FurnitureService {
                 name.orElse(""),
                 PageRequest.of(page.orElse(0), 5)
         ));
+    }
+
+    @Override
+    public ResponseEntity<Boolean> verifyOnSale(ArrayList<BillDetails> details) {
+        for(BillDetails detail : details){
+            Furniture furniture = this.furnitureRepository.findById(detail.getFurniture().getCode()).orElse(null);
+            try{
+                if(furniture.getStatus()==0 || furniture.getStatus() == 2) return ResponseEntity.status(HttpStatus.OK).body(false);
+            }catch(Exception ex){
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
+            }
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(true);
+    }
+
+    @Override
+    @Transactional
+    public ResponseEntity<Boolean> putSold(BillData billData){
+        for(BillDetails detail : billData.getDetails()){
+            try{
+                Furniture furniture = this.furnitureRepository.findById(detail.getFurniture().getCode()).orElse(null);
+                furniture.setStatus(2);
+                this.furnitureRepository.save(furniture);
+
+                detail.setBill(billData.getBill());
+                this.billDetailRepository.save(detail);
+            }catch(Exception ex){
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
+            }
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(true);
     }
 }

@@ -22,7 +22,9 @@ public class ReportServiceImpl implements ReportService {
 
     @Override
     public ResponseEntity<Object> getBestSellerInXPeriod(Optional<String> initialDate, Optional<String> finalDate) {
-        return null;
+        ResponseEntity<Object> response = this.restTemplate.getForEntity("http://localhost:8085/sale/bill/best-seller?initialDate="+initialDate.orElse("0001-01-01")+"&finalDate="+finalDate.orElse("2100-01-01"), Object.class);
+        if(response.getStatusCode().equals(HttpStatus.OK)) return ResponseEntity.status(HttpStatus.OK).body(response.getBody());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response.getBody());
     }
 
     @Override

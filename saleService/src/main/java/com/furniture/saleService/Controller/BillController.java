@@ -1,6 +1,9 @@
 package com.furniture.saleService.Controller;
 
+import com.furniture.saleService.Model.Bill;
+import com.furniture.saleService.Model.BillData;
 import com.furniture.saleService.Service.BillServiceImp;
+import com.furniture.saleService.Util.CONST;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -46,5 +49,10 @@ public class BillController {
     @GetMapping("bill/best-seller")
     public ResponseEntity<Object> getBestSeller(@RequestParam String initialDate, @RequestParam String finalDate){
         return this.billServiceImp.getBestSeller(initialDate, finalDate);
+    }
+
+    @PostMapping("bill")
+    public ResponseEntity<Bill> doBill(@RequestHeader("Authorization") String token, @RequestBody BillData billData){
+        return this.billServiceImp.doBill(token, billData);
     }
 }
