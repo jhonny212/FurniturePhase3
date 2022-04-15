@@ -14,15 +14,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests()
-                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-//                .antMatchers(HttpMethod.POST, "/**").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/login").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/isAdminLoggedIn").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/isFabricatemanLoggedIn").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/isSalesmanLoggedIn").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/isLoggedIn").permitAll()
+                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll() //Que permita los options de cualquier solitud
+                .antMatchers(HttpMethod.POST, "/user/login").permitAll() //Dejamos abierta la ruta sin verificacion de jwt
+                .antMatchers(HttpMethod.POST, "/user/isAdminLoggedIn").permitAll() //Igual que arriba
+                .antMatchers(HttpMethod.POST, "/user/isFabricatemanLoggedIn").permitAll() //Igual que arriba
+                .antMatchers(HttpMethod.POST, "/user/isSalesmanLoggedIn").permitAll() //Igual que arriba
+                .antMatchers(HttpMethod.POST, "/user/isLoggedIn").permitAll()//Igual que arriba
                 .anyRequest().authenticated()
                 .and()
-                .addFilterBefore(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class); //Agregamos el filtro, para los cors
     }
 }

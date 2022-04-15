@@ -11,6 +11,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adminService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Controller/FurnitureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Controller/FurnitureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/CategoryServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/CategoryServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/PieceServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/PieceServiceImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,15 +77,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\salesReportService\src\main\java\com\furniture\salesReportService" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\saleService\src\main\java\com\furniture\saleService" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\reportService\src\main\java\com\furniture\reportService" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\inventoryService\src\main\java\com\furniture\inventoryService" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\furnitureService\src\main\java\com\furniture\furnitureService" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\adminService\src\main\java\com\furniture\adminService\config" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\furnitureService\src\main\java\com\furniture\furnitureService\config" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\inventoryService\src\main\java\com\furniture\inventoryService\config" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\reportService\src\main\java\com\furniture\reportService\config" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\salesReportService\src\main\java\com\furniture\salesReportService\config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.furniture.salesReportService.Util" />
@@ -99,6 +107,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.FurnitureServiceApplication">
+  <component name="RunManager" selected="Spring Boot.SaleServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -233,6 +242,8 @@
       <workItem from="1649651756687" duration="2685000" />
       <workItem from="1649874838908" duration="3990000" />
       <workItem from="1649899141419" duration="4574000" />
+      <workItem from="1649874838908" duration="5111000" />
+      <workItem from="1649900751636" duration="17055000" />
     </task>
     <servers />
   </component>

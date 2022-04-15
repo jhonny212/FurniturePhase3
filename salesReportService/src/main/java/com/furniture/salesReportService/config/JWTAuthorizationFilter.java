@@ -1,16 +1,10 @@
 package com.furniture.salesReportService.config;
 
 import com.furniture.salesReportService.Model.Profile;
-import com.furniture.salesReportService.Util.CONST;
-import io.jsonwebtoken.*;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
-import org.springframework.http.converter.HttpMessageNotWritableException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -18,9 +12,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class JWTAuthorizationFilter extends OncePerRequestFilter {
@@ -31,38 +22,11 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException {
         configureCors(request, response);
-        try{
-            if(checkJWTToken(request, response)){
-                Claims claims = getClaimsFromToken(request.getHeader(CONST.AUTHORIZATION_HEADER.value()));
-                if(claims.get("authorities") != null){
-                    setUpSpringAuthentication(claims);
-                }else{
-                    SecurityContextHolder.clearContext();
-                }
-            }else{
-                SecurityContextHolder.clearContext();
-            }
+        try {
             chain.doFilter(request, response);
-        }catch(ExpiredJwtException | UnsupportedJwtException | MalformedJwtException | HttpMessageNotWritableException | ServletException e){
-            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-            response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
-            return;
+        } catch (ServletException e) {
+            e.printStackTrace();
         }
-    }
-
-    private void setUpSpringAuthentication(Claims claims){
-        @SuppressWarnings("unchecked")
-        List<String> authorities = (List<String>) claims.get("authorities");
-        UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(claims.getSubject(), null,
-                authorities.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList()));
-        SecurityContextHolder.getContext().setAuthentication(auth);
-    }
-
-    private boolean checkJWTToken(HttpServletRequest request, HttpServletResponse response){
-        String authenticationHeader = request.getHeader(CONST.AUTHORIZATION_HEADER.value());
-        if (authenticationHeader == null)
-            return false;
-        return true;
     }
 
     //Metodos de la clase para configuración interna -------------------------------------------------------------------------------
@@ -84,28 +48,6 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     private Claims getClaimsFromToken(String token){
         return Jwts.parser().setSigningKey(SECRET.getBytes()).parseClaimsJws(token).getBody();
-    }
-
-    public String generateToken(String username, int user_type, int id_user){
-        List<GrantedAuthority> grantedAuthorities = AuthorityUtils
-                .commaSeparatedStringToAuthorityList("ROLE_USER");
-        String token = Jwts
-                .builder()
-                .setId("softtekJWT")
-                .setSubject(username)
-                .claim("username",username)
-                .claim("user_type",user_type)
-                .claim("id_user",id_user)
-                .claim("authorities",
-                        grantedAuthorities.stream()
-                                .map(GrantedAuthority::getAuthority)
-                                .collect(Collectors.toList()))
-                .setIssuedAt(new Date(System.currentTimeMillis()))
-                .signWith(
-                        SignatureAlgorithm.HS512,
-                        SECRET.getBytes())
-                .compact();
-        return token;
     }
 
     public Profile getProfileFromToken(String token){
