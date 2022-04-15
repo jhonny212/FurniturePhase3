@@ -1,6 +1,7 @@
 package com.furniture.furnitureService.Controller;
 
 import com.furniture.furnitureService.Model.Furniture;
+import com.furniture.furnitureService.Model.BillDetails;
 import com.furniture.furnitureService.ServiceImp.FurnitureServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,10 +12,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/fabricate/furniture")
 public class FurnitureController {
+
     @Autowired
     private FurnitureServiceImp furnitureServiceImp;
 

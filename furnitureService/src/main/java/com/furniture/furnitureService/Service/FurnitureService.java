@@ -6,6 +6,10 @@ import org.springframework.data.domain.Page;
 import java.text.ParseException;
 import java.util.Date;
 import java.util.Optional;
+import com.furniture.furnitureService.Model.BillDetails;
+import org.springframework.http.ResponseEntity;
+
+import java.util.ArrayList;
 
 public interface FurnitureService {
     public boolean putOnSale(Integer id);

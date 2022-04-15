@@ -1,5 +1,6 @@
 package com.furniture.furnitureService.ServiceImp;
 
+import com.furniture.furnitureService.Model.BillDetails;
 import com.furniture.furnitureService.Model.Furniture;
 import com.furniture.furnitureService.Repository.FurnitureRepository;
 import com.furniture.furnitureService.Service.FurnitureService;
@@ -7,7 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -17,8 +23,10 @@ import java.util.Optional;
 
 @Service
 public class FurnitureServiceImp implements FurnitureService {
+
     @Autowired
     private FurnitureRepository furnitureRepository;
+
     @Override
     public boolean putOnSale(Integer id) {
         Furniture tmp = furnitureRepository.findById(id).orElse(null);
