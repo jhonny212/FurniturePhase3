@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_6_6.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/Controller/InvoiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/Repository/BillDetailsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/Repository/BillRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/Service/InvoiceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/Service/SaleFurnitureService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/ServiceImp/InvoiceServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/ServiceImp/SaleFurnitureServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Controller/FurnitureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Controller/FurnitureController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Repository/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/CategoryServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/CategoryServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/PieceServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/PieceServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Repository/FurnitureRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Repository/FurnitureRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Service/FurnitureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Service/FurnitureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -45,7 +49,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -76,7 +80,6 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -107,7 +110,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.FurnitureServiceApplication">
-  <component name="RunManager" selected="Spring Boot.SaleServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
