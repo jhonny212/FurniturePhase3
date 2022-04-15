@@ -38,12 +38,12 @@ public class BillController {
         return ResponseEntity.ok().body(obj);
     }
 
-    @GetMapping("/bill/best-earner")
+    @GetMapping("bill/best-earner")
     public ResponseEntity<Object> getBestEarner(@RequestParam String initialDate, @RequestParam String finalDate){
         return this.billServiceImp.getBestEarner(initialDate, finalDate);
     }
 
-    @GetMapping("/bill/best-seller")
+    @GetMapping("bill/best-seller")
     public ResponseEntity<Object> getBestSeller(@RequestParam String initialDate, @RequestParam String finalDate){
         return this.billServiceImp.getBestSeller(initialDate, finalDate);
     }
