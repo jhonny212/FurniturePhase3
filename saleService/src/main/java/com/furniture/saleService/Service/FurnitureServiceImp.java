@@ -2,10 +2,16 @@ package com.furniture.saleService.Service;
 
 import com.furniture.saleService.Model.BillDetails;
 import com.furniture.saleService.Model.Furniture;
+import com.furniture.saleService.Model.OnSaleData;
 import com.furniture.saleService.Repository.BillDetailRepository;
 import com.furniture.saleService.Repository.FurnitureRepository;
 import com.furniture.saleService.ServiceImp.FurnitureService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -17,7 +23,9 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Optional;
 
+@Service
 public class FurnitureServiceImp implements FurnitureService {
+
     @Autowired
     private BillDetailRepository billDetailRepository;
     @Autowired
@@ -67,5 +75,36 @@ public class FurnitureServiceImp implements FurnitureService {
             }
         }
         return false;
+    }
+
+    @Override
+    public ResponseEntity<Boolean> putFurnitureOnSale(OnSaleData onSaleData){
+        Furniture furniture = this.furnitureRepository.findById(onSaleData.getCode()).orElse(null);
+        if(furniture!=null){
+            furniture.setPrice(onSaleData.getPrice());
+            furniture.setStatus(1);
+            this.furnitureRepository.save(furniture);
+            return ResponseEntity.status(HttpStatus.OK).body(true);
+        }else{
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(false);
+        }
+    }
+
+    @Override
+    public ResponseEntity<Page<Furniture>> getFurnituresOnSale(Optional<Integer> page, Optional<String> name) {
+        return this.getFurnituresByStatus(page, name, 1);
+    }
+
+    @Override
+    public ResponseEntity<Page<Furniture>> getFurnituresOnStorage(Optional<Integer> page, Optional<String> name) {
+        return this.getFurnituresByStatus(page, name, 0);
+    }
+
+    public ResponseEntity<Page<Furniture>> getFurnituresByStatus(Optional<Integer> page, Optional<String> name, Integer status){
+        return ResponseEntity.status(HttpStatus.OK).body(this.furnitureRepository.findByStatusAndNameContainsIgnoreCase(
+                status,
+                name.orElse(""),
+                PageRequest.of(page.orElse(0), 5)
+        ));
     }
 }
