@@ -46,7 +46,7 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     //Metodos de la clase para manipulación de tokens ------------------------------------------------------------------------------
 
-    private Claims getClaimsFromToken(String token){
+    public Claims getClaimsFromToken(String token){
         return Jwts.parser().setSigningKey(SECRET.getBytes()).parseClaimsJws(token).getBody();
     }
 
