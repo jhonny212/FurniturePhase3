@@ -103,6 +103,10 @@ public class Profile implements Serializable{
 
     public boolean getStatus(){return this.status;}
 
+    public boolean isAdmin(){ return this.userType == 0; }
+    public boolean isSalesMan() { return this.userType == 1; }
+    public boolean isFabricateMan() { return this.userType == 2; }
+
     @Override
     public String toString() {
         return "Profile{" +
