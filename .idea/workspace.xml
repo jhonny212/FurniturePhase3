@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Repository/AssignFurniturePieceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Repository/AssignPlanPieceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Repository/PieceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Repository/StockPieceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Controller/FurnitureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Controller/FurnitureController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Service/FurnitureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Service/FurnitureService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/JWTAuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/BillServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/BillServiceImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +98,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.FurnitureServiceApplication">
+  <component name="RunManager" selected="Spring Boot.SalesReportServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -135,7 +126,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,7 +138,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,7 +150,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,7 +162,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -183,7 +174,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -195,7 +186,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -207,7 +198,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <envs>
-        <env name="db_url" value="jdbc:postgresql://localhost:53710/furniture?user=postgres&amp;password=pgyeferal" />
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=josecarlos" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
