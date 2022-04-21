@@ -22,11 +22,6 @@ public class BillServiceImp implements BillService {
     private BillDetailRepository billDetailRepository;
     @Autowired
     private BillRepository billRepository;
-    @Autowired
-    private ClientServiceImp clientServiceImp;
-    @Autowired
-    private FurnitureServiceImp furnitureServiceImp;
-    private JWTAuthorizationFilter jwt = new JWTAuthorizationFilter();
 
     @Override
     public List<Object[]> getDetailBill(int id) {
@@ -76,16 +71,20 @@ public class BillServiceImp implements BillService {
     @Override
     @Transactional
     public ResponseEntity<Bill> doBill(String token, BillData billData) {
+        ClientServiceImp clientServiceImp = new ClientServiceImp();
+        FurnitureServiceImp furnitureServiceImp = new FurnitureServiceImp();
+        JWTAuthorizationFilter jwt = new JWTAuthorizationFilter();
+
         billData.getBill().setDateTime(Utilities.getActualDate());
-        billData.getBill().setProfile(this.jwt.getProfileFromToken(token));
-        ResponseEntity<Boolean> createClientIfNotExist = this.clientServiceImp.createClientIfNotExist(billData.getBill().getClient());
+        billData.getBill().setProfile(jwt.getProfileFromToken(token));
+        ResponseEntity<Boolean> createClientIfNotExist = clientServiceImp.createClientIfNotExist(billData.getBill().getClient());
 
         if(createClientIfNotExist.getStatusCode().equals(HttpStatus.OK)){
-            ResponseEntity<Boolean> verifyFurnituresOnSale = this.furnitureServiceImp.verifyOnSale(billData.getDetails());
+            ResponseEntity<Boolean> verifyFurnituresOnSale = furnitureServiceImp.verifyOnSale(billData.getDetails());
 
             if(verifyFurnituresOnSale.getStatusCode().equals(HttpStatus.OK) && verifyFurnituresOnSale.getBody()){
                 this.billRepository.save(billData.getBill());
-                ResponseEntity<Boolean> createBillDetails = this.furnitureServiceImp.putSold(billData);
+                ResponseEntity<Boolean> createBillDetails = furnitureServiceImp.putSold(billData);
 
                 if(createBillDetails.getStatusCode().equals(HttpStatus.OK)){
                     return ResponseEntity.status(HttpStatus.OK).body(billData.getBill());

@@ -1,4 +1,4 @@
-package com.furniture.inventoryService.config;
+package com.furniture.salesReportService.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpEntity;
@@ -11,7 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
