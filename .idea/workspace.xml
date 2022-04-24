@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/FilterConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/FilterConfiguration.java" afterDir="false" />
-    </list>
+    <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,11 +90,11 @@
       <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\salesReportService\src\main\java\com\furniture\salesReportService\config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.furniture.salesReportService.Util" />
-      <recent name="com.furniture.saleService.Util" />
-      <recent name="com.furniture.reportService.Util" />
-      <recent name="com.furniture.inventoryService.Util" />
-      <recent name="com.furniture.furnitureService.Util" />
+      <recent name="com.furniture.salesReportService.config" />
+      <recent name="com.furniture.saleService.config" />
+      <recent name="com.furniture.reportService.config" />
+      <recent name="com.furniture.furnitureService.config" />
+      <recent name="com.furniture.adminService.config" />
     </key>
   </component>
   <component name="RunDashboard">
