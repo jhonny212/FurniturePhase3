@@ -2,6 +2,7 @@ package com.furniture.gatewayService.Controller;
 
 import com.furniture.gatewayService.Model.ServiceImp.AuthenticationServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,5 +37,10 @@ public class AuthenticationController {
     @PostMapping("/isLoggedIn")
     public ResponseEntity<Boolean> isLoggedIn(@RequestHeader(value="Authorization",required = false) String token){
         return authenticationServiceImpl.isLoggedIn(token);
+    }
+
+    @PostMapping("/verifyJWT")
+    public ResponseEntity<Boolean> verifyJWT(){
+        return ResponseEntity.status(HttpStatus.OK).body(true);
     }
 }

@@ -1,8 +1,12 @@
 package com.furniture.adminService.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Entity
@@ -12,14 +16,22 @@ public class Profile implements Serializable{
     @Column(name = "id_user")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @NotNull(message = "Debe registrar un nombre de usuario")
+    @NotBlank(message = "El nombre de usuario no puede estar vacio")
     @Column(unique = true,nullable = false)
     private String username;
+    @NotNull(message = "Debe registrar un nombre")
     @Column(nullable = false,name="first_name")
     private String firstName;
+    @NotNull(message = "Debe registrar el apellido")
     @Column(nullable = false,name="last_name")
     private String lastName;
+    @NotNull(message = "Debe registrar una contraseña")
+    @Length(min = 8,message = "Debe ingresar una contraseña mayor o igual a 8 caracteres")
     @Column(nullable = false, columnDefinition = "TEXT")
     private String password;
+    @NotNull(message = "Debe seleccionar un tipo de usuario")
+    @Size(min = 0, max = 3, message = "Debe selecconar un tipo de usuario valido")
     @Column(nullable = false,name="user_type")
     private Integer userType;
 
