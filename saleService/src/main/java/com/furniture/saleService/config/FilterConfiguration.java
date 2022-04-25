@@ -34,7 +34,7 @@ public class FilterConfiguration {
                 HttpEntity<Map<String, Object>> entity = new HttpEntity<>(new HashMap<>(), headers);
                 ResponseEntity<Boolean> authenticationResponse = restTemplate.postForEntity("http://localhost:8080/user/verifyJWT", entity, Boolean.class);
 
-                if(!authenticationResponse.getBody().equals(HttpStatus.OK)){
+                if(!authenticationResponse.getStatusCode().equals(HttpStatus.OK)){
                     throw new ResponseStatusException(HttpStatus.FORBIDDEN);
                 }
 

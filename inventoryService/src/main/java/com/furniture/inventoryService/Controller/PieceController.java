@@ -26,7 +26,7 @@ public class PieceController {
 
     @PostMapping
     public ResponseEntity<Piece> createPiece(
-        @Valid @RequestBody Piece piece, BindingResult result) {
+        @Valid @RequestBody Piece piece, BindingResult result,@RequestHeader("Authorization") String auth) {
         if(result.hasErrors()){
                 throw new ResponseStatusException(HttpStatus.BAD_REQUEST,util.formatMessage(result));
         }
@@ -39,7 +39,7 @@ public class PieceController {
 
     @PutMapping
     public ResponseEntity<Piece> updatePiece(
-        @Valid @RequestBody Piece piece,BindingResult result
+        @Valid @RequestBody Piece piece,BindingResult result,@RequestHeader("Authorization") String auth
     ){
         if(result.hasErrors()){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,util.formatMessage(result));
@@ -52,7 +52,7 @@ public class PieceController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Piece> getPieceById(@PathVariable("id") int id){
+    public ResponseEntity<Piece> getPieceById(@PathVariable("id") int id,@RequestHeader("Authorization") String auth){
         Piece piece = PieceServiceImp.getPieceById(id);
         if(piece == null){
             return new ResponseEntity<>(null,HttpStatus.NO_CONTENT);
@@ -63,7 +63,7 @@ public class PieceController {
     @PostMapping("/stock/{id}/{stock}/{cost}")
     public ResponseEntity<Boolean> addInStock(
         @PathVariable("id") int id, @PathVariable("stock") int stock,
-        @PathVariable("cost") double cost
+        @PathVariable("cost") double cost,@RequestHeader("Authorization") String auth
         ){
         if(this.PieceServiceImp.addInStock(id,stock,cost)){
             return ResponseEntity.ok().body(true);
@@ -74,7 +74,7 @@ public class PieceController {
     @PostMapping("/remove/{id}/{stock}")
     public ResponseEntity<Boolean> removeInStokc(
         @PathVariable("id") int id,
-        @PathVariable("stock") int stock
+        @PathVariable("stock") int stock,@RequestHeader("Authorization") String auth
         ){
         boolean bool = this.PieceServiceImp.removeInStock(id,stock);
         if(bool){

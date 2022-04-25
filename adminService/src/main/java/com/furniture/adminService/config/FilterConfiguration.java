@@ -1,10 +1,14 @@
 package com.furniture.adminService.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -34,7 +38,7 @@ public class FilterConfiguration {
                 HttpEntity<Map<String, Object>> entity = new HttpEntity<>(new HashMap<>(), headers);
                 ResponseEntity<Boolean> authenticationResponse = restTemplate.postForEntity("http://localhost:8080/user/verifyJWT", entity, Boolean.class);
 
-                if(!authenticationResponse.getBody().equals(HttpStatus.OK)){
+                if(!authenticationResponse.getStatusCode().equals(HttpStatus.OK)){
                     throw new ResponseStatusException(HttpStatus.FORBIDDEN);
                 }
 

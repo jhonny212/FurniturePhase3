@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/admin/user")
 public class UserController {
 
     @Autowired
@@ -26,7 +26,8 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<Profile> createUser(
-            @Valid @RequestBody  Profile profile, BindingResult result){
+            @Valid @RequestBody  Profile profile, BindingResult result,
+            @RequestHeader("Authorization") String auth){
         if(result.hasErrors()){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,util.formatMessage(result));
         }else{
@@ -42,15 +43,17 @@ public class UserController {
     @GetMapping()
     public ResponseEntity<Page<Profile>> getAllUsers(@RequestParam Optional<Integer> page,
                                      @RequestParam Optional<String> name,
-                                     @RequestParam Optional<Integer> role
+                                     @RequestParam Optional<Integer> role,
+                                     @RequestHeader("Authorization") String auth
     ){
         if(name.isPresent() || role.isPresent() ){
             return ResponseEntity.ok(this.userServiceImp.FilterAllUsers(page,name,role));
         }
         return ResponseEntity.ok(this.userServiceImp.getAllUsers(page));
     }
-    @DeleteMapping
-    private ResponseEntity<Boolean> deleteUser(@RequestParam("id") int id){
+    @DeleteMapping("/{id}")
+    private ResponseEntity<Boolean> deleteUser(@PathVariable("id") int id,
+                                               @RequestHeader("Authorization") String auth){
         return ResponseEntity.ok().body(userServiceImp.deleteUser(id));
     }
 }
