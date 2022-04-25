@@ -55,7 +55,7 @@ public class FurnitureController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Boolean> onSale(@PathVariable("id") int id){
+    public ResponseEntity<Boolean> onSale(@PathVariable("id") int id,@RequestHeader("Authorization") String auth){
         return ResponseEntity.ok().body(furnitureServiceImp.putOnSale(id));
     }
 

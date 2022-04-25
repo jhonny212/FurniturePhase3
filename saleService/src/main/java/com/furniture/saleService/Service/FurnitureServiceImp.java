@@ -38,7 +38,7 @@ public class FurnitureServiceImp implements FurnitureService {
     public boolean returnFurniture(int id, int code) {
         Date tmp = billDetailRepository.getDetail(id,code);
         if(tmp!=null){
-            LocalDate date = tmp.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+            LocalDate date = LocalDate.parse(tmp.toString());
             if(getDiffDay(date)){
                 Furniture fun = furnitureRepository.findById(code).orElse(null);
                 if(fun!=null){
@@ -66,8 +66,11 @@ public class FurnitureServiceImp implements FurnitureService {
         if(furniture.getPlan()!=null){
             Optional<BillDetails> tmp = this.billDetailRepository.findById(id);
             if(tmp.isPresent()){
+                LocalDate localDate = LocalDate.now();
+                ZoneId defaultZoneId = ZoneId.systemDefault();
+                Date d = Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());;
                 tmp.get().setCostLost(lost);
-                tmp.get().setDateReturn(date);
+                tmp.get().setDateReturn(d);
                 this.billDetailRepository.save(tmp.get());
                 return true;
             }else{

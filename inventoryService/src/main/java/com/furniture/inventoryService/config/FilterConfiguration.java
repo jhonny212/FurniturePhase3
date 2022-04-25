@@ -1,6 +1,9 @@
 package com.furniture.inventoryService.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -15,9 +18,9 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-//@Configuration
+@Order(Ordered.HIGHEST_PRECEDENCE)
+@Configuration
 public class FilterConfiguration {
-
     private RestTemplate restTemplate = new RestTemplate();
 
     @Bean
@@ -27,12 +30,12 @@ public class FilterConfiguration {
             @Override
             public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
                 HttpHeaders headers = this.getHeaders((HttpServletRequest) request);//Obtenemos los headers del que solicita
-
                 // build the request
+                String aut = ((HttpServletRequest) request).getHeader("authorization");
                 HttpEntity<Map<String, Object>> entity = new HttpEntity<>(new HashMap<>(), headers);
-                ResponseEntity<Boolean> authenticationResponse = restTemplate.postForEntity("http://localhost:8080/user/verifyJWT", entity, Boolean.class);
+                 ResponseEntity<Boolean> authenticationResponse = restTemplate.postForEntity("http://localhost:8080/user/verifyJWT", entity, Boolean.class);
 
-                if(!authenticationResponse.getBody().equals(HttpStatus.OK)){
+                if(!authenticationResponse.getStatusCode().equals(HttpStatus.OK)){
                     throw new ResponseStatusException(HttpStatus.FORBIDDEN);
                 }
 

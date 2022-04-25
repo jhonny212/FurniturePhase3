@@ -73,7 +73,14 @@ public class PieceServiceImp implements PieceService{
     @Override
     public boolean addInStock(int id, int stock,double cost) {
         Optional<Piece> tmp = pieceRepository.findById(id);
-        return tmp.filter(piece -> addInStock(piece, stock, cost)).isPresent();
+        boolean isadd = tmp.filter(piece -> addInStock(piece, stock, cost)).isPresent();
+        if(isadd){
+            tmp.get().setStock(tmp.get().getStock()+stock);
+            this.pieceRepository.save(tmp.get());
+            return true;
+        }else{
+            return false;
+        }
     }
 
     @Override

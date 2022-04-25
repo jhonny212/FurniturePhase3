@@ -17,12 +17,17 @@ public class FurnitureController {
     @Autowired
     private FurnitureServiceImp furnitureServiceImp;
 
-    @PostMapping("/devolution")
+    @PostMapping("/devolution/{id}/{code}")
     public ResponseEntity returnFurniture(
-            @RequestParam(value = "id") int id,
-            @RequestParam(value = "code") int code
+            @PathVariable(value = "id") int id,
+            @PathVariable(value = "code") int code,
+            @RequestHeader("Authorization") String auth
     ){
-        return null;
+        boolean valid = furnitureServiceImp.returnFurniture(id, code);
+        if(!valid){
+            return ResponseEntity.badRequest().body(false);
+        }
+        return ResponseEntity.ok(true);
     }
 
     @PutMapping("/put-furniture-on-sale")

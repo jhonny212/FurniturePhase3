@@ -1,6 +1,7 @@
 package com.furniture.inventoryService.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -24,7 +25,7 @@ public class Piece implements Serializable {
     private String name;
     @Column(nullable = true)
     private double price;
-    @Size(min = 0,message = "Debe ingresar una cantidad mayor o igual a 0")
+    @Range(min = 0,message = "Debe ingresar una cantidad mayor o igual a 0")
     @Column(nullable = false)
     private Integer stock;
     @NotNull(message = "Debe registrar una categoria a la pieza")
