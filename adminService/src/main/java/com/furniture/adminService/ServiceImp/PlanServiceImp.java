@@ -6,7 +6,10 @@ import com.furniture.adminService.Service.PlanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Service
 public class PlanServiceImp implements PlanService {
 
     @Autowired
@@ -15,6 +18,7 @@ public class PlanServiceImp implements PlanService {
     private AssignPlanPieceServiceImp assignPlanPieceServiceImp;
 
     @Override
+    @Transactional
     public ResponseEntity<String> createPlan(PlanData planData) {
         try{
             this.planRepository.save(planData.getPlan());

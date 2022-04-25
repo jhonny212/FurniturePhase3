@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="" />
+    <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/adminService/src/test/java/com/furniture/adminService/ServiceImp/PlanServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Model/PlanData.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Model/PlanData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Service/AssignPlanPieceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Service/AssignPlanPieceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/AssignPlanPieceServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/AssignPlanPieceServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/PlanServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/PlanServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ReportServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ReportServiceApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,8 +24,8 @@
         <option value="Enum" />
         <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -104,7 +112,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.InventoryServiceApplication">
+  <component name="RunManager" selected="JUnit.PlanServiceImpTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -122,6 +130,36 @@
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlanServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="adminService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.adminService.ServiceImp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.adminService.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.adminService.ServiceImp.PlanServiceImpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reportService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.reportService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.reportService" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.reportService.ReportServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -212,6 +250,7 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in adminService" />
+      <item itemvalue="JUnit.PlanServiceImpTest" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.AdminServiceApplication" />
       <item itemvalue="Spring Boot.FurnitureServiceApplication" />
@@ -219,7 +258,14 @@
       <item itemvalue="Spring Boot.ReportServiceApplication" />
       <item itemvalue="Spring Boot.SaleServiceApplication" />
       <item itemvalue="Spring Boot.SalesReportServiceApplication" />
+      <item itemvalue="JUnit.ReportServiceApplicationTests" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PlanServiceImpTest" />
+        <item itemvalue="JUnit.ReportServiceApplicationTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -243,6 +289,8 @@
       <workItem from="1649900751636" duration="18259000" />
       <workItem from="1650038929504" duration="3804000" />
       <workItem from="1650201427282" duration="3393000" />
+      <workItem from="1650761819874" duration="1693000" />
+      <workItem from="1650820440808" duration="10769000" />
     </task>
     <servers />
   </component>

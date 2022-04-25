@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface AssignPlanPieceService {
 
-    public ResponseEntity<String> createAssignments(List<AssignPlanPiece> assignments, Plan plan);
+    public ResponseEntity<String> createAssignments(List<AssignPlanPiece> assignments, Plan plan) throws Exception;
 }
