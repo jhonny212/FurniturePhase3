@@ -5,6 +5,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -12,6 +13,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Collections;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class JWTAuthorizationFilter extends OncePerRequestFilter {
@@ -32,6 +36,8 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
     //Metodos de la clase para configuración interna -------------------------------------------------------------------------------
 
     private void configureCors(HttpServletRequest request, HttpServletResponse response) {
+        HttpHeaders headers = this.getHeaders((HttpServletRequest) request);//Obtenemos los headers del que solicita
+
         response.setHeader("Access-Control-Allow-Origin", getOriginFromHeader(request));
         response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
         response.setHeader("Access-Control-Max-Age", "3600");
@@ -59,5 +65,16 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
                 (Integer)claims.get("user_type")
         );
         return profile;
+    }
+
+    private HttpHeaders getHeaders(HttpServletRequest request){
+        return Collections.list(request.getHeaderNames())
+                .stream()
+                .collect(Collectors.toMap(
+                        Function.identity(),
+                        h -> Collections.list(request.getHeaders(h)),
+                        (oldValue, newValue) -> newValue,
+                        HttpHeaders::new
+                ));
     }
 }
