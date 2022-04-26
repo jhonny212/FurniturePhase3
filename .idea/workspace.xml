@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="" />
+    <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ServiceImp/BillServiceImpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ServiceImp/FurnitureServiceImpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ServiceImp/ReportServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salesReportService/src/test/java/com/furniture/salesReportService/ServiceImp/InvoiceServiceImpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salesReportService/src/test/java/com/furniture/salesReportService/ServiceImp/SaleFurnitureServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/test/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/test/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/ServiceImp/InvoiceServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/ServiceImp/InvoiceServiceImp.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,8 +30,9 @@
         <option value="Enum" />
         <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -79,6 +90,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -92,6 +105,14 @@
       <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\inventoryService\src\main\java\com\furniture\inventoryService\config" />
       <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\reportService\src\main\java\com\furniture\reportService\config" />
       <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\salesReportService\src\main\java\com\furniture\salesReportService\config" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.furniture.reportService.ServiceImp" />
+      <recent name="com.furniture.furnitureService.ServiceImp" />
+      <recent name="com.furniture.salesReportService.ServiceImp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.furniture.salesReportService.Util" />
@@ -108,7 +129,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
+  <component name="RunManager" selected="JUnit.BillServiceImpTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -130,25 +151,79 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in inventoryService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventoryService" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+    <configuration name="BillServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reportService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.reportService.ServiceImp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.reportService.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.reportService.ServiceImp.BillServiceImpTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventoryService" />
+    <configuration name="FurnitureServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="furnitureService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.furniture.inventoryService.*" />
+          <option name="PATTERN" value="com.furniture.furnitureService.ServiceImp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.inventoryService" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.inventoryService.InventoryServiceApplicationTests" />
+      <option name="PACKAGE_NAME" value="com.furniture.furnitureService.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.furnitureService.ServiceImp.FurnitureServiceImpTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reportService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.reportService.ServiceImp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.reportService.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.reportService.ServiceImp.ReportServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportServiceImplTest.getReportEarningsXPeriod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reportService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.reportService.ServiceImp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.reportService.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.reportService.ServiceImp.ReportServiceImplTest" />
+      <option name="METHOD_NAME" value="getReportEarningsXPeriod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportServiceImplTest.getReportMinFurnitureXPeriod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reportService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.reportService.ServiceImp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.reportService.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.reportService.ServiceImp.ReportServiceImplTest" />
+      <option name="METHOD_NAME" value="getReportMinFurnitureXPeriod" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -239,8 +314,6 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in adminService" />
-      <item itemvalue="JUnit.All in inventoryService" />
-      <item itemvalue="JUnit.InventoryServiceApplicationTests" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.AdminServiceApplication" />
       <item itemvalue="Spring Boot.FurnitureServiceApplication" />
@@ -248,11 +321,19 @@
       <item itemvalue="Spring Boot.ReportServiceApplication" />
       <item itemvalue="Spring Boot.SaleServiceApplication" />
       <item itemvalue="Spring Boot.SalesReportServiceApplication" />
+      <item itemvalue="JUnit.FurnitureServiceImpTest" />
+      <item itemvalue="JUnit.ReportServiceImplTest.getReportMinFurnitureXPeriod" />
+      <item itemvalue="JUnit.ReportServiceImplTest" />
+      <item itemvalue="JUnit.ReportServiceImplTest.getReportEarningsXPeriod" />
+      <item itemvalue="JUnit.BillServiceImpTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InventoryServiceApplicationTests" />
-        <item itemvalue="JUnit.All in inventoryService" />
+        <item itemvalue="JUnit.BillServiceImpTest" />
+        <item itemvalue="JUnit.ReportServiceImplTest.getReportEarningsXPeriod" />
+        <item itemvalue="JUnit.ReportServiceImplTest" />
+        <item itemvalue="JUnit.ReportServiceImplTest.getReportMinFurnitureXPeriod" />
+        <item itemvalue="JUnit.FurnitureServiceImpTest" />
       </list>
     </recent_temporary>
   </component>
@@ -284,6 +365,7 @@
       <workItem from="1650694955247" duration="8000" />
       <workItem from="1650743039943" duration="609000" />
       <workItem from="1650201427282" duration="3393000" />
+      <workItem from="1650908660908" duration="15170000" />
     </task>
     <servers />
   </component>
@@ -308,6 +390,21 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FurniturePhase3$InventoryServiceApplicationTests.ic" NAME="InventoryServiceApplicationTests Coverage Results" MODIFIED="1650493584557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.furniture.inventoryService.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$SaleFurnitureServiceImpTest.ic" NAME="SaleFurnitureServiceImpTest Coverage Results" MODIFIED="1650918814796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.salesReportService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$FurnitureServiceImpTest.ic" NAME="FurnitureServiceImpTest Coverage Results" MODIFIED="1650922924457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.furnitureService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$FurnitureServiceImpTest_postRegisterFurniture.ic" NAME="FurnitureServiceImpTest.postRegisterFurniture Coverage Results" MODIFIED="1650921961658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.furnitureService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$InvoiceServiceImpTest.ic" NAME="InvoiceServiceImpTest Coverage Results" MODIFIED="1650918782717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.salesReportService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$SalesReportServiceApplicationTests.ic" NAME="SalesReportServiceApplicationTests Coverage Results" MODIFIED="1650918885948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.salesReportService.*</FILTER>
     </SUITE>
   </component>
 </project>
