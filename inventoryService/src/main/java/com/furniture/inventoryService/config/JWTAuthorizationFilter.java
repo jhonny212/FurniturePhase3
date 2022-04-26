@@ -17,7 +17,7 @@ import java.util.Collections;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-@Order(Ordered.HIGHEST_PRECEDENCE)
+//@Order(Ordered.HIGHEST_PRECEDENCE)
 public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     private final String SECRET = "mySecretKey";
@@ -25,6 +25,9 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
     //Metodos de configuración de la clase -----------------------------------------------------------------------------------------
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException {
+        HttpHeaders headers = this.getHeaders((HttpServletRequest) request);//Obtenemos los headers del que solicita
+        // build the request
+        String aut = request.getHeader("authorization");
         configureCors(request, response);
         try {
             chain.doFilter(request, response);
@@ -36,8 +39,6 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
     //Metodos de la clase para configuración interna -------------------------------------------------------------------------------
 
     private void configureCors(HttpServletRequest request, HttpServletResponse response) {
-        HttpHeaders headers = this.getHeaders((HttpServletRequest) request);//Obtenemos los headers del que solicita
-
         response.setHeader("Access-Control-Allow-Origin", getOriginFromHeader(request));
         response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
         response.setHeader("Access-Control-Max-Age", "3600");

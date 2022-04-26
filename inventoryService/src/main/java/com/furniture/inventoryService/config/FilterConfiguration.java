@@ -13,13 +13,13 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-@Order(Ordered.HIGHEST_PRECEDENCE)
-@Configuration
+//@Configuration
 public class FilterConfiguration {
     private RestTemplate restTemplate = new RestTemplate();
 
@@ -32,14 +32,29 @@ public class FilterConfiguration {
                 HttpHeaders headers = this.getHeaders((HttpServletRequest) request);//Obtenemos los headers del que solicita
                 // build the request
                 String aut = ((HttpServletRequest) request).getHeader("authorization");
+                configureCors((HttpServletRequest) request, (HttpServletResponse) response);
                 HttpEntity<Map<String, Object>> entity = new HttpEntity<>(new HashMap<>(), headers);
-                 ResponseEntity<Boolean> authenticationResponse = restTemplate.postForEntity("http://localhost:8080/user/verifyJWT", entity, Boolean.class);
+                ResponseEntity<Boolean> authenticationResponse = restTemplate.postForEntity("http://localhost:8080/user/verifyJWT", entity, Boolean.class);
 
                 if(!authenticationResponse.getStatusCode().equals(HttpStatus.OK)){
+                    System.out.println("Hubo un error aparentemente, estamos probando");
                     throw new ResponseStatusException(HttpStatus.FORBIDDEN);
                 }
 
                 chain.doFilter(request, response);
+            }
+
+            private void configureCors(HttpServletRequest request, HttpServletResponse response) {
+                response.setHeader("Access-Control-Allow-Origin", getOriginFromHeader(request));
+                response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
+                response.setHeader("Access-Control-Max-Age", "3600");
+                response.setHeader("Access-Control-Allow-Credentials", "true");
+                response.setHeader("Access-Control-Allow-Headers", "Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization");
+            }
+
+            private String getOriginFromHeader(HttpServletRequest request){
+                String clientOrigin = request.getHeader("origin");
+                return (clientOrigin == null)? "*":clientOrigin;
             }
 
             private HttpHeaders getHeaders(HttpServletRequest request){

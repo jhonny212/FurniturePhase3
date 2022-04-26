@@ -19,7 +19,6 @@ import org.springframework.validation.Validator;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-//@CrossOrigin(origins = "http://localhost:4200",allowCredentials = "true",maxAge = 3600)
 @RestController()
 @RequestMapping("fabricate/category")
 public class CategoryController {
@@ -30,8 +29,7 @@ public class CategoryController {
     private Util util;
 
     @PostMapping
-    public ResponseEntity<Category> createCategory(@Valid @RequestBody Category category, BindingResult result,
-                                                   @RequestHeader("Authorization") String auth){
+    public ResponseEntity<Category> createCategory(@Valid @RequestBody Category category, BindingResult result){
         if(result.hasErrors()){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,util.formatMessage(result));
         }
@@ -44,8 +42,7 @@ public class CategoryController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Category>> getAllCategories(@RequestParam Optional<String> name,
-                                                           @RequestHeader("Authorization") String auth){
+    public ResponseEntity<List<Category>> getAllCategories(@RequestParam Optional<String> name){
         List<Category> cat = this.categoryServiceImp.getAllCategories(name.orElse(""));
         if (cat == null){
             return new ResponseEntity<>(null,HttpStatus.NO_CONTENT);

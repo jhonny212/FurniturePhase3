@@ -6,7 +6,11 @@ public class PlanData {
     private Plan plan;
     private ArrayList<AssignPlanPiece> assignments;
 
-    public PlanData(){}
+    public PlanData(){
+        this.plan = new Plan();
+        this.assignments = new ArrayList<>();
+    }
+
     public PlanData(Plan plan, ArrayList<AssignPlanPiece> assignments){
         this.plan = plan;
         this.assignments = assignments;

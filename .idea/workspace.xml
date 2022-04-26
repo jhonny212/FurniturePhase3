@@ -4,10 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="fb17ba84-3a0c-4209-86d1-4c7603e946b3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/CorsFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/CorsFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/CorsFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/CorsFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/CorsFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/CorsFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/FilterConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/FilterConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/JWTAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/FilterConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/FilterConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/JWTAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/config/JWTAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/FilterConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/FilterConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/JWTAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/FilterConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/FilterConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/JWTAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/FilterConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/FilterConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/JWTAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/FilterConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/FilterConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/JWTAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +51,8 @@
         <option value="Enum" />
         <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -79,7 +110,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -87,18 +118,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\adminService\src\main\java\com\furniture\adminService\config" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\furnitureService\src\main\java\com\furniture\furnitureService\config" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\inventoryService\src\main\java\com\furniture\inventoryService\config" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\reportService\src\main\java\com\furniture\reportService\config" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\salesReportService\src\main\java\com\furniture\salesReportService\config" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\salesReportService\src\main\java\com\furniture\salesReportService" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\saleService\src\main\java\com\furniture\saleService" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\reportService\src\main\java\com\furniture\reportService" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\furnitureService\src\main\java\com\furniture\furnitureService" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\adminService\src\main\java\com\furniture\adminService" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.furniture.salesReportService.Util" />
-      <recent name="com.furniture.saleService.Util" />
-      <recent name="com.furniture.reportService.Util" />
-      <recent name="com.furniture.inventoryService.Util" />
-      <recent name="com.furniture.furnitureService.Util" />
+      <recent name="com.furniture.salesReportService.config" />
+      <recent name="com.furniture.saleService.config" />
+      <recent name="com.furniture.reportService.config" />
+      <recent name="com.furniture.furnitureService.config" />
+      <recent name="com.furniture.adminService.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -126,6 +157,36 @@
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlanServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="adminService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.adminService.ServiceImp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.adminService.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.adminService.ServiceImp.PlanServiceImpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reportService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.reportService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.reportService" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.reportService.ReportServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -216,6 +277,8 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in adminService" />
+      <item itemvalue="JUnit.PlanServiceImpTest" />
+      <item itemvalue="JUnit.ReportServiceApplicationTests" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.AdminServiceApplication" />
       <item itemvalue="Spring Boot.FurnitureServiceApplication" />
@@ -224,11 +287,17 @@
       <item itemvalue="Spring Boot.SaleServiceApplication" />
       <item itemvalue="Spring Boot.SalesReportServiceApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PlanServiceImpTest" />
+        <item itemvalue="JUnit.ReportServiceApplicationTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="" />
+      <changelist id="fb17ba84-3a0c-4209-86d1-4c7603e946b3" name="Changes" comment="" />
       <created>1649466127631</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -247,8 +316,7 @@
       <workItem from="1649900751636" duration="18259000" />
       <workItem from="1650038929504" duration="3804000" />
       <workItem from="1650201427282" duration="3393000" />
-      <workItem from="1650574882983" duration="867000" />
-      <workItem from="1650653165500" duration="221000" />
+      <workItem from="1650938439196" duration="8771000" />
     </task>
     <servers />
   </component>
@@ -256,6 +324,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="application.properties" />
     <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
     <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
   </component>
@@ -269,5 +338,22 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Controller/CategoryController.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="request" />
+        <watch expression="request" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

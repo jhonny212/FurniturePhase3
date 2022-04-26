@@ -19,18 +19,9 @@ public class AssignPlanPieceServiceImp implements AssignPlanPieceService {
 
     @Override
     public ResponseEntity<String> createAssignments(List<AssignPlanPiece> assignments, Plan plan) {
-        int i = 0;
-        try{
-            for (i = 0; i < assignments.size(); i++){
-                assignments.get(i).setPlan(plan);
-                this.assignPlanPieceRepository.save(assignments.get(i));
-            }
-            return ResponseEntity.status(HttpStatus.OK).body("Se ha creado el plan y sus asignaciones correctamente");
-        }catch(Exception ex){
-            for(int j = 0; j < i; j++){
-                this.assignPlanPieceRepository.delete(assignments.get(i));
-            }
-            return ResponseEntity.status(HttpStatus.PRECONDITION_FAILED).body("Ha ocurrido un error al registrar las asignaciones");
+        for (AssignPlanPiece assignment : assignments) {
+            this.assignPlanPieceRepository.save(assignment);
         }
+        return ResponseEntity.status(HttpStatus.OK).body("Se ha creado el plan y sus asignaciones correctamente");
     }
 }
