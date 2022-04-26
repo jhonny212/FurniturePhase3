@@ -2,6 +2,7 @@ package com.furniture.adminService.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -31,7 +32,7 @@ public class Profile implements Serializable{
     @Column(nullable = false, columnDefinition = "TEXT")
     private String password;
     @NotNull(message = "Debe seleccionar un tipo de usuario")
-    @Size(min = 0, max = 3, message = "Debe selecconar un tipo de usuario valido")
+    @Range(min = 0, max = 3, message = "Debe selecconar un tipo de usuario valido")
     @Column(nullable = false,name="user_type")
     private Integer userType;
 

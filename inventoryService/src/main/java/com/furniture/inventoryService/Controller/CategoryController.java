@@ -42,7 +42,7 @@ public class CategoryController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Category>> getAllCategories(@RequestParam Optional<String> name ){
+    public ResponseEntity<List<Category>> getAllCategories(@RequestParam Optional<String> name){
         List<Category> cat = this.categoryServiceImp.getAllCategories(name.orElse(""));
         if (cat == null){
             return new ResponseEntity<>(null,HttpStatus.NO_CONTENT);

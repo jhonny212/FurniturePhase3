@@ -23,7 +23,8 @@ public class BillController {
 
     @GetMapping("{id}")
     public ResponseEntity<List<Object[]>> getDetailBill (
-            @PathVariable("id") int id
+            @PathVariable("id") int id,
+            @RequestHeader("Authorization") String auth
     ){
         List<Object[]> obj = billServiceImp.getDetailBill(id);
         if(obj==null){
@@ -33,7 +34,8 @@ public class BillController {
     }
 
     @GetMapping("client/{id}")
-    public ResponseEntity<Object> getDetailClientByBillId(@PathVariable("id") int id){
+    public ResponseEntity<Object> getDetailClientByBillId(@PathVariable("id") int id,
+        @RequestHeader("Authorization") String auth){
         Object obj = billServiceImp.getClientByIdBill(id);
         if (obj==null){
             return ResponseEntity.internalServerError().body(null);

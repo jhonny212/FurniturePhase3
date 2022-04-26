@@ -1,6 +1,6 @@
 package com.furniture.reportService.ServiceImp;
 
-import com.furniture.reportService.Service.BillDetailsRepository;
+import com.furniture.reportService.Repository.BillDetailsRepository;
 import com.furniture.reportService.Service.FurnitureReportController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

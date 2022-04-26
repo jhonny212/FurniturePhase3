@@ -3,8 +3,10 @@ package com.furniture.gatewayService.config;
 import com.furniture.gatewayService.Util.CONST;
 import com.furniture.gatewayService.Model.Profile;
 import io.jsonwebtoken.*;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.converter.HttpMessageNotWritableException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
@@ -18,8 +20,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
@@ -30,6 +34,9 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
     //Metodos de configuración de la clase -----------------------------------------------------------------------------------------
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException {
+        HttpHeaders headers = this.getHeaders((HttpServletRequest) request);//Obtenemos los headers del que solicita
+        // build the request
+        String aut = request.getHeader("authorization");
         configureCors(request, response);
         try{
             if(checkJWTToken(request, response)){
@@ -72,12 +79,23 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
         response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
         response.setHeader("Access-Control-Max-Age", "3600");
         response.setHeader("Access-Control-Allow-Credentials", "true");
-        response.setHeader("Access-Control-Allow-Headers", "Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization");
+        response.setHeader("Access-Control-Allow-Headers", "Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,authorization");
     }
 
     private String getOriginFromHeader(HttpServletRequest request){
         String clientOrigin = request.getHeader("origin");
         return (clientOrigin == null)? "*":clientOrigin;
+    }
+
+    private HttpHeaders getHeaders(HttpServletRequest request){
+        return Collections.list(request.getHeaderNames())
+                .stream()
+                .collect(Collectors.toMap(
+                        Function.identity(),
+                        h -> Collections.list(request.getHeaders(h)),
+                        (oldValue, newValue) -> newValue,
+                        HttpHeaders::new
+                ));
     }
 
     //Metodos de la clase para manipulación de tokens ------------------------------------------------------------------------------

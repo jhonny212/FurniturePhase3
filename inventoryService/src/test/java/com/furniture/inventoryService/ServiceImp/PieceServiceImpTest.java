@@ -118,6 +118,7 @@ class PieceServiceImpTest {
     @Test
     void addStockReturnTrue(){
         Optional<Piece> opt = Optional.of(piece);
+        piece.setStock(0);
         Mockito.when(
           pieceRepository.findById(Mockito.anyInt())
         ).thenReturn(opt);

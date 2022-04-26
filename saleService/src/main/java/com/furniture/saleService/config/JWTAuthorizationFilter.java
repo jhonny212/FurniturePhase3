@@ -1,9 +1,9 @@
 package com.furniture.saleService.config;
 
 import com.furniture.saleService.Model.Profile;
-import io.jsonwebtoken.*;
-import org.springframework.core.Ordered;
-import org.springframework.core.annotation.Order;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -11,8 +11,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Collections;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
-@Order(Ordered.HIGHEST_PRECEDENCE)
+//@Order(Ordered.HIGHEST_PRECEDENCE)
 public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     private final String SECRET = "mySecretKey";
@@ -20,6 +23,9 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
     //Metodos de configuración de la clase -----------------------------------------------------------------------------------------
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException {
+        HttpHeaders headers = this.getHeaders((HttpServletRequest) request);//Obtenemos los headers del que solicita
+        // build the request
+        String aut = request.getHeader("authorization");
         configureCors(request, response);
         try {
             chain.doFilter(request, response);
@@ -58,5 +64,16 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
                 (Integer)claims.get("user_type")
         );
         return profile;
+    }
+
+    private HttpHeaders getHeaders(HttpServletRequest request){
+        return Collections.list(request.getHeaderNames())
+                .stream()
+                .collect(Collectors.toMap(
+                        Function.identity(),
+                        h -> Collections.list(request.getHeaders(h)),
+                        (oldValue, newValue) -> newValue,
+                        HttpHeaders::new
+                ));
     }
 }

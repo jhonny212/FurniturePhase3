@@ -129,7 +129,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BillServiceImpTest">
+  <component name="RunManager" selected="Spring Boot.AdminServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -365,7 +365,7 @@
       <workItem from="1650694955247" duration="8000" />
       <workItem from="1650743039943" duration="609000" />
       <workItem from="1650201427282" duration="3393000" />
-      <workItem from="1650908660908" duration="15170000" />
+      <workItem from="1650908660908" duration="15823000" />
     </task>
     <servers />
   </component>
