@@ -115,15 +115,11 @@ public class PieceServiceImp implements PieceService{
 
     @Override
     public ResponseEntity<String> deletePiece(Integer id){
-        try{
-            this.pieceRepository.deleteById(id);
-            if(this.pieceRepository.existsById(id)){
-                return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body("No se eliminó la pieza correctamente");
-            }else{
-                return ResponseEntity.status(HttpStatus.OK).body("Se ha eliminado la pieza correctamente");
-            }
-        }catch(Exception ex){
-            return ResponseEntity.status(HttpStatus.PRECONDITION_REQUIRED).body(ex.getMessage());
+        this.pieceRepository.deleteById(id);
+        if(this.pieceRepository.existsById(id)){
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body("No se eliminó la pieza correctamente");
+        }else{
+            return ResponseEntity.status(HttpStatus.OK).body("Se ha eliminado la pieza correctamente");
         }
     }
 }

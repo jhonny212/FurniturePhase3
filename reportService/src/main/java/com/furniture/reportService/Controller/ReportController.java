@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -29,12 +30,12 @@ public class ReportController {
 
     @GetMapping("/report-best-seller-x-period")
     public ResponseEntity<Object> getBestSellerInXPeriod(@RequestParam(value="date1") Optional<String> initialDate, @RequestParam(value="date2") Optional<String> finalDate){
-        return this.reportServiceImpl.getBestSellerInXPeriod(initialDate, finalDate);
+        return this.reportServiceImpl.getBestSellerInXPeriod(initialDate, finalDate, new RestTemplate());
     }
 
     @GetMapping("/report-best-earner-x-period")
     public ResponseEntity<Object> getBestEarnerInXPeriod(@RequestParam(value="date1") Optional<String> initialDate, @RequestParam(value="date2") Optional<String> finalDate){
-        return this.reportServiceImpl.getBestEarnerInXPeriod(initialDate, finalDate);
+        return this.reportServiceImpl.getBestEarnerInXPeriod(initialDate, finalDate, new RestTemplate());
     }
 
     @GetMapping("/report-max-furniture-x-period")

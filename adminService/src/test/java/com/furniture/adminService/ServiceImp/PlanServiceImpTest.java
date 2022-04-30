@@ -9,8 +9,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -65,6 +69,22 @@ public class PlanServiceImpTest {
         assertEquals(
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
                 planServiceImp.createPlan(planData).getStatusCodeValue()
+        );
+    }
+
+    @Test
+    void getPageOfPlans(){
+        Page<Plan> list = Page.empty();
+        Mockito.when(
+                this.planRepository.findByNameContainsIgnoreCase(
+                        Mockito.anyString(), Mockito.any(Pageable.class)
+                )
+        ).thenReturn(list);
+        Optional<String> name = Optional.empty();
+        Optional<Integer> page = Optional.empty();
+        assertEquals(
+                ResponseEntity.status(HttpStatus.OK).body(list),
+                this.planServiceImp.getAllPlans(name, page)
         );
     }
 }

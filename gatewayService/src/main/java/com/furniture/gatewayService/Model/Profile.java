@@ -40,7 +40,9 @@ public class Profile implements Serializable{
         this.status=true;
 
     }
+
     public Profile(){}
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }

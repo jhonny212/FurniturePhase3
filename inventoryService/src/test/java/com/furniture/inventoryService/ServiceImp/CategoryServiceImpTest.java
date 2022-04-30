@@ -10,6 +10,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.springframework.http.HttpStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,5 +67,27 @@ class CategoryServiceImpTest {
                 )
         ).thenThrow(DataException.class);
         assertNull(categoryServiceImp.getAllCategories(""));
+    }
+
+    @Test
+    public void deleteCategoryFailed(){
+        Mockito.when(
+                categoryRepository.existsById(Mockito.anyInt())
+        ).thenReturn(true);
+        assertEquals(
+                HttpStatus.EXPECTATION_FAILED,
+                categoryServiceImp.deleteCategory(1).getStatusCode()
+        );
+    }
+
+    @Test
+    public void deleteCategorySuccess(){
+        Mockito.when(
+                categoryRepository.existsById(Mockito.anyInt())
+        ).thenReturn(false);
+        assertEquals(
+                HttpStatus.OK,
+                categoryServiceImp.deleteCategory(1).getStatusCode()
+        );
     }
 }
