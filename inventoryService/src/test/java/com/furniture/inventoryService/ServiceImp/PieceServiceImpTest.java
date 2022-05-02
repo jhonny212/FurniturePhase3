@@ -19,6 +19,10 @@ import java.util.Optional;
 
 import com.furniture.inventoryService.Model.Piece;
 import com.furniture.inventoryService.Repository.PieceRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 
 class PieceServiceImpTest {
     @Mock
@@ -214,5 +218,39 @@ class PieceServiceImpTest {
                 stockPieceRepository
         ).deleteAll(Mockito.anyList());
         assertFalse(pieceServiceImp.removeInStock(1,1));
+    }
+
+    @Test
+    public void getAllPieces(){
+        Page<Piece> pagina = new PageImpl<Piece>(new ArrayList());
+        Mockito.when(
+                this.pieceRepository.findByNameContainsIgnoreCase(Mockito.anyString(),Mockito.any(Pageable.class))
+        ).thenReturn(pagina);
+        assertEquals(
+                HttpStatus.OK,
+                pieceServiceImp.getAllPieces(Optional.of(1), Optional.of("anyName")).getStatusCode()
+        );
+    }
+
+    @Test
+    public void deletePieceFailed(){
+        Mockito.when(
+                pieceRepository.existsById(Mockito.anyInt())
+        ).thenReturn(true);
+        assertEquals(
+                HttpStatus.EXPECTATION_FAILED,
+                pieceServiceImp.deletePiece(1).getStatusCode()
+        );
+    }
+
+    @Test
+    public void deletePieceSuccess(){
+        Mockito.when(
+                pieceRepository.existsById(Mockito.anyInt())
+        ).thenReturn(false);
+        assertEquals(
+                HttpStatus.OK,
+                pieceServiceImp.deletePiece(1).getStatusCode()
+        );
     }
 }

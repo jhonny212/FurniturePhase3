@@ -40,15 +40,11 @@ public class CategoryServiceImp implements CategoryService{
 
     @Override
     public ResponseEntity<String> deleteCategory(Integer id) {
-        try {
-            this.categoryRepository.deleteById(id);
-            if (this.categoryRepository.existsById(id)) {
-                return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body("No se ha eliminado la categoría correctamente");
-            } else {
-                return ResponseEntity.status(HttpStatus.OK).body("Se ha eliminado la categoria de la pieza correctamente");
-            }
-        }catch(Exception ex){
-            return ResponseEntity.status(HttpStatus.PRECONDITION_REQUIRED).body(ex.getMessage());
+        this.categoryRepository.deleteById(id);
+        if (this.categoryRepository.existsById(id)) {
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body("No se ha eliminado la categoría correctamente");
+        } else {
+            return ResponseEntity.status(HttpStatus.OK).body("Se ha eliminado la categoria de la pieza correctamente");
         }
     }
 

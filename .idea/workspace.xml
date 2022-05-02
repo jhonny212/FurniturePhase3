@@ -4,17 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ServiceImp/BillServiceImpTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ServiceImp/FurnitureServiceImpTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ServiceImp/ReportServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/salesReportService/src/test/java/com/furniture/salesReportService/ServiceImp/InvoiceServiceImpTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/salesReportService/src/test/java/com/furniture/salesReportService/ServiceImp/SaleFurnitureServiceImpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/test/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/test/java/com/furniture/furnitureService/ServiceImp/FurnitureServiceImpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/ServiceImp/InvoiceServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService/ServiceImp/InvoiceServiceImp.java" afterDir="false" />
-    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +118,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AdminServiceApplication">
+  <component name="RunManager" selected="JUnit.ReportServiceApplicationTests">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -151,17 +140,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="reportService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.furniture.reportService.ServiceImp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.reportService.ServiceImp" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.reportService.ServiceImp.BillServiceImpTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -405,6 +383,14 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/FurniturePhase3$SalesReportServiceApplicationTests.ic" NAME="SalesReportServiceApplicationTests Coverage Results" MODIFIED="1650918885948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.furniture.salesReportService.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FurniturePhase3$PlanServiceImpTest_getPageOfPlans.ic" NAME="PlanServiceImpTest.getPageOfPlans Coverage Results" MODIFIED="1651121013169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.adminService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$PlanServiceImpTest.ic" NAME="PlanServiceImpTest Coverage Results" MODIFIED="1651121046841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.adminService.ServiceImp.*</FILTER>
     </SUITE>
   </component>
 </project>

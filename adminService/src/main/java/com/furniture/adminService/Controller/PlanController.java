@@ -24,6 +24,6 @@ public class PlanController {
 
     @GetMapping("")
     public ResponseEntity<Page<Plan>> getAllPlans(@RequestParam Optional<Integer> page, @RequestParam Optional<String> name){
-        return null;
+        return this.planServiceImp.getAllPlans(name, page);
     }
 }

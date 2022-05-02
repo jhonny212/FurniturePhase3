@@ -41,9 +41,7 @@ public class FurnitureController {
             @RequestHeader("Authorization") String token
     ) throws ParseException {
         JWTAuthorizationFilter jwtaf = new JWTAuthorizationFilter();
-        Claims claims = jwtaf.getClaimsFromToken(token);
-        Profile tmpProfile = new Profile();
-        tmpProfile.setId((Integer) claims.get("id_user"));
+        Profile tmpProfile = jwtaf.getProfileFromToken(token);
 
         SimpleDateFormat formatter2=new SimpleDateFormat("yyyy-MM-dd");
         Date date2=formatter2.parse(creationDate);
