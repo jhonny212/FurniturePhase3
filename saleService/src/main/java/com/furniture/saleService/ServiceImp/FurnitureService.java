@@ -13,8 +13,6 @@ import java.util.Optional;
 public interface FurnitureService {
     public boolean returnFurniture(int id,int code);
     public ResponseEntity<Boolean> putFurnitureOnSale(OnSaleData onSaleData);
-    public ResponseEntity<Page<Furniture>> getFurnituresOnSale(Optional<Integer> page, Optional<String> name);
-    public ResponseEntity<Page<Furniture>> getFurnituresOnStorage(Optional<Integer> page,Optional<String> name);
     public ResponseEntity<Boolean> verifyOnSale(ArrayList<BillDetails> details);
     public ResponseEntity<Boolean> putSold(BillData billData);
 }

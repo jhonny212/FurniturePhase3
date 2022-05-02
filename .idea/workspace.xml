@@ -5,23 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb17ba84-3a0c-4209-86d1-4c7603e946b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gatewayService/src/test/java/com/furniture/gatewayService/AuthenticationServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ReportServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/ClientServiceImpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/FurnitureInBillServiceImpTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Controller/PlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Controller/PlanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Repository/PlanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Repository/PlanRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Service/PlanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/Service/PlanService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/PlanServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/PlanServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminService/src/test/java/com/furniture/adminService/ServiceImp/PlanServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/test/java/com/furniture/adminService/ServiceImp/PlanServiceImpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Controller/FurnitureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/java/com/furniture/furnitureService/Controller/FurnitureController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Model/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/src/main/java/com/furniture/gatewayService/Model/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/CategoryServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/CategoryServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/PieceServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/ServiceImp/PieceServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/src/test/java/com/furniture/inventoryService/ServiceImp/CategoryServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/test/java/com/furniture/inventoryService/ServiceImp/CategoryServiceImpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventoryService/src/test/java/com/furniture/inventoryService/ServiceImp/PieceServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/test/java/com/furniture/inventoryService/ServiceImp/PieceServiceImpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/Controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/Controller/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/Service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/Service/ReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/ServiceImp/ReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/ServiceImp/ReportServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ReportServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ReportServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/BillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/BillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/FurnitureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/FurnitureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/FurnitureInBillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/FurnitureInBillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/BillServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/BillServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/FurnitureInBillServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/FurnitureInBillServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/FurnitureServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/FurnitureServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/BillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/BillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/FurnitureInBillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/FurnitureInBillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/FurnitureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/FurnitureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/BillServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/BillServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/FurnitureServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/FurnitureServiceImpTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +121,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ReportServiceApplicationTests">
+  <component name="RunManager" selected="JUnit.FurnitureInBillServiceImpTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -144,80 +143,80 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PieceServiceImpTest.deletePieceFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventoryService" />
+    <configuration name="FurnitureInBillServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saleService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.furniture.inventoryService.ServiceImp.*" />
+          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.inventoryService.ServiceImp" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.inventoryService.ServiceImp.PieceServiceImpTest" />
-      <option name="METHOD_NAME" value="deletePieceFailed" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PieceServiceImpTest.deletePieceSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventoryService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.furniture.inventoryService.ServiceImp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.inventoryService.ServiceImp" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.inventoryService.ServiceImp.PieceServiceImpTest" />
-      <option name="METHOD_NAME" value="deletePieceSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PieceServiceImpTest.getAllPieces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventoryService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.furniture.inventoryService.ServiceImp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.inventoryService.ServiceImp" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.inventoryService.ServiceImp.PieceServiceImpTest" />
-      <option name="METHOD_NAME" value="getAllPieces" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReportServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="reportService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.furniture.reportService.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.reportService" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.reportService.ReportServiceApplicationTests" />
+      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureInBillServiceImpTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReportServiceApplicationTests.doBestSellerReportWith" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="reportService" />
+    <configuration name="FurnitureInBillServiceImpTest.addFurnitureFromBillFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saleService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.furniture.reportService.*" />
+          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.reportService" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.reportService.ReportServiceApplicationTests" />
-      <option name="METHOD_NAME" value="doBestSellerReportWith" />
+      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureInBillServiceImpTest" />
+      <option name="METHOD_NAME" value="addFurnitureFromBillFailed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FurnitureInBillServiceImpTest.addFurnitureFromBillSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saleService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureInBillServiceImpTest" />
+      <option name="METHOD_NAME" value="addFurnitureFromBillSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FurnitureInBillServiceImpTest.removeFurnitureFromBillFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saleService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureInBillServiceImpTest" />
+      <option name="METHOD_NAME" value="removeFurnitureFromBillFailed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FurnitureInBillServiceImpTest.removeFurnitureFromBillSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saleService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureInBillServiceImpTest" />
+      <option name="METHOD_NAME" value="removeFurnitureFromBillSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -316,19 +315,19 @@
       <item itemvalue="Spring Boot.ReportServiceApplication" />
       <item itemvalue="Spring Boot.SaleServiceApplication" />
       <item itemvalue="Spring Boot.SalesReportServiceApplication" />
-      <item itemvalue="JUnit.PieceServiceImpTest.getAllPieces" />
-      <item itemvalue="JUnit.PieceServiceImpTest.deletePieceFailed" />
-      <item itemvalue="JUnit.PieceServiceImpTest.deletePieceSuccess" />
-      <item itemvalue="JUnit.ReportServiceApplicationTests.doBestSellerReportWith" />
-      <item itemvalue="JUnit.ReportServiceApplicationTests" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillSuccess" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillFailed" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillSuccess" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillFailed" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReportServiceApplicationTests" />
-        <item itemvalue="JUnit.ReportServiceApplicationTests.doBestSellerReportWith" />
-        <item itemvalue="JUnit.PieceServiceImpTest.deletePieceSuccess" />
-        <item itemvalue="JUnit.PieceServiceImpTest.deletePieceFailed" />
-        <item itemvalue="JUnit.PieceServiceImpTest.getAllPieces" />
+        <item itemvalue="JUnit.FurnitureInBillServiceImpTest" />
+        <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillSuccess" />
+        <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillFailed" />
+        <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillFailed" />
+        <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -397,11 +396,29 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FurniturePhase3$SaleFurnitureServiceImpTest.ic" NAME="SaleFurnitureServiceImpTest Coverage Results" MODIFIED="1650918814796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.salesReportService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$InvoiceServiceImpTest.ic" NAME="InvoiceServiceImpTest Coverage Results" MODIFIED="1650918782717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.salesReportService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$SalesReportServiceApplicationTests.ic" NAME="SalesReportServiceApplicationTests Coverage Results" MODIFIED="1650918885948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.salesReportService.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$FurnitureServiceImpTest.ic" NAME="FurnitureServiceImpTest Coverage Results" MODIFIED="1650922924457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.furnitureService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$InventoryServiceApplicationTests.ic" NAME="InventoryServiceApplicationTests Coverage Results" MODIFIED="1650493584557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.inventoryService.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/FurniturePhase3$PlanServiceImpTest_getPageOfPlans.ic" NAME="PlanServiceImpTest.getPageOfPlans Coverage Results" MODIFIED="1651121013169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.furniture.adminService.ServiceImp.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/FurniturePhase3$PlanServiceImpTest.ic" NAME="PlanServiceImpTest Coverage Results" MODIFIED="1651121046841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.furniture.adminService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$FurnitureServiceImpTest_postRegisterFurniture.ic" NAME="FurnitureServiceImpTest.postRegisterFurniture Coverage Results" MODIFIED="1650921961658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.furnitureService.ServiceImp.*</FILTER>
     </SUITE>
   </component>
 </project>

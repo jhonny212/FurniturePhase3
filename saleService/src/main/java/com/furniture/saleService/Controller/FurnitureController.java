@@ -37,11 +37,11 @@ public class FurnitureController {
 
     @GetMapping("/on-sale")
     public ResponseEntity<Page<Furniture>> getFurnituresOnSale(@RequestParam Optional<Integer> page, @RequestParam Optional<String> name){
-        return this.furnitureServiceImp.getFurnituresOnSale(page, name);
+        return this.furnitureServiceImp.getFurnituresByStatus(page, name, 1);
     }
 
     @GetMapping("/on-storage")
     public ResponseEntity<Page<Furniture>> getFurnituresOnStorage(@RequestParam Optional<Integer> page, @RequestParam Optional<String> name){
-        return this.furnitureServiceImp.getFurnituresOnStorage(page, name);
+        return this.furnitureServiceImp.getFurnituresByStatus(page, name,0);
     }
 }

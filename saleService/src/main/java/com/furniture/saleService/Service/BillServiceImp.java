@@ -64,16 +64,12 @@ public class BillServiceImp implements BillService {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Ha ocurrido un error al convertir una de las fechas");
         }
         Object body = this.billDetailRepository.getBestSeller(date1, date2);
-        System.out.println(body.toString());
         return ResponseEntity.status(HttpStatus.OK).body(body);
     }
 
     @Override
     @Transactional
-    public ResponseEntity<Bill> doBill(String token, BillData billData) {
-        ClientServiceImp clientServiceImp = new ClientServiceImp();
-        FurnitureServiceImp furnitureServiceImp = new FurnitureServiceImp();
-        JWTAuthorizationFilter jwt = new JWTAuthorizationFilter();
+    public ResponseEntity<Bill> doBill(String token, BillData billData,ClientServiceImp clientServiceImp,FurnitureServiceImp furnitureServiceImp,JWTAuthorizationFilter jwt) {
 
         billData.getBill().setDateTime(Utilities.getActualDate());
         billData.getBill().setProfile(jwt.getProfileFromToken(token));

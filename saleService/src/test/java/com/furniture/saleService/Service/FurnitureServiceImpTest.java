@@ -1,8 +1,6 @@
 package com.furniture.saleService.Service;
 
-import com.furniture.saleService.Model.BillDetails;
-import com.furniture.saleService.Model.Furniture;
-import com.furniture.saleService.Model.Plan;
+import com.furniture.saleService.Model.*;
 import com.furniture.saleService.Repository.BillDetailRepository;
 import com.furniture.saleService.Repository.FurnitureRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,6 +10,12 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,9 +23,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Optional;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -123,5 +125,147 @@ class FurnitureServiceImpTest {
                 furnitureRepository.save(Mockito.any(Furniture.class))
         ).thenReturn(furniture);
         assertFalse(furnitureServiceImp.repayment(furniture,1,dd));
+    }
+
+    @Test
+    public void putFurnitureOnSaleSuccesfully(){
+        Optional<Furniture> furniture = Optional.of(new Furniture());
+        Mockito.when(
+                furnitureRepository.findById(Mockito.anyInt())
+        ).thenReturn(furniture);
+        Mockito.when(
+                furnitureRepository.save(furniture.get())
+        ).thenReturn(furniture.get());
+        assertEquals(
+                HttpStatus.OK,
+                furnitureServiceImp.putFurnitureOnSale(new OnSaleData(1,0.0)).getStatusCode()
+        );
+    }
+
+    @Test
+    public void putFurnitureOnSaleFailed(){
+        Optional<Furniture> furniture = Optional.of(new Furniture());
+        Mockito.when(
+                furnitureRepository.findById(Mockito.anyInt())
+        ).thenReturn(Optional.empty());
+        assertEquals(
+                HttpStatus.NOT_FOUND,
+                furnitureServiceImp.putFurnitureOnSale(new OnSaleData(1,0.0)).getStatusCode()
+        );
+    }
+
+    @Test
+    public void getFurnituresByState() {
+        Page<Furniture> pagina = new PageImpl<Furniture>(new ArrayList());
+        Mockito.when(
+                furnitureRepository.findByStatusAndNameContainsIgnoreCase(Mockito.anyInt(),Mockito.anyString(),Mockito.any(Pageable.class))
+        ).thenReturn(pagina);
+        assertEquals(
+                HttpStatus.OK,
+                furnitureServiceImp.getFurnituresByStatus(
+                        Optional.of(1),
+                        Optional.of("anyValue"),
+                        1
+                ).getStatusCode()
+        );
+    }
+
+    @Test
+    public void verifyOnSaleAvailableSuccess(){
+        Optional<Furniture> furniture = Optional.of(new Furniture(1,"",0.0,0.0,new Date(),"","",null,null,1));
+
+        ArrayList<BillDetails> mockedDetails = new ArrayList();
+        mockedDetails.add(new BillDetails(1, new Bill(), furniture.get(), 0.0));
+        mockedDetails.add(new BillDetails(2, new Bill(), furniture.get(), 0.0));
+        mockedDetails.add(new BillDetails(3, new Bill(), furniture.get(), 0.0));
+
+        Mockito.when(
+                furnitureRepository.findById(Mockito.anyInt())
+        ).thenReturn(furniture);
+        assertEquals(
+                ResponseEntity.status(HttpStatus.OK).body(true),
+                furnitureServiceImp.verifyOnSale(mockedDetails)
+        );
+    }
+
+    @Test
+    public void verifyOnSaleNotAvailableSuccess(){
+        Optional<Furniture> furniture = Optional.of(new Furniture(1,"",0.0,0.0,new Date(),"","",null,null,0));
+
+        ArrayList<BillDetails> mockedDetails = new ArrayList();
+        mockedDetails.add(new BillDetails(1, new Bill(), furniture.get(), 0.0));
+        mockedDetails.add(new BillDetails(2, new Bill(), furniture.get(), 0.0));
+        mockedDetails.add(new BillDetails(3, new Bill(), furniture.get(), 0.0));
+
+        Mockito.when(
+                furnitureRepository.findById(Mockito.anyInt())
+        ).thenReturn(furniture);
+        assertEquals(
+                ResponseEntity.status(HttpStatus.OK).body(false),
+                furnitureServiceImp.verifyOnSale(mockedDetails)
+        );
+    }
+
+    @Test
+    public void verifyOnSaleFailed(){
+        Optional<Furniture> furniture = Optional.of(new Furniture(1,"",0.0,0.0,new Date(),"","",null,null,0));
+
+        ArrayList<BillDetails> mockedDetails = new ArrayList();
+        mockedDetails.add(new BillDetails(1, new Bill(), furniture.get(), 0.0));
+        mockedDetails.add(new BillDetails(2, new Bill(), furniture.get(), 0.0));
+        mockedDetails.add(new BillDetails(3, new Bill(), furniture.get(), 0.0));
+
+        Mockito.when(
+                furnitureRepository.findById(Mockito.anyInt())
+        ).thenThrow(RuntimeException.class);
+        assertEquals(
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                furnitureServiceImp.verifyOnSale(mockedDetails).getStatusCode()
+        );
+    }
+
+    @Test
+    public void putSoldSuccesfull(){
+        Optional<Furniture> furniture = Optional.of(new Furniture(1,"",0.0,0.0,new Date(),"","",null,null,0));
+
+        ArrayList<BillDetails> mockedDetails = new ArrayList();
+        mockedDetails.add(new BillDetails(1, null, furniture.get(), 0.0));
+        mockedDetails.add(new BillDetails(2, null, furniture.get(), 0.0));
+        mockedDetails.add(new BillDetails(3, null, furniture.get(), 0.0));
+        BillData billData = new BillData(new Bill(), mockedDetails);
+
+        Mockito.when(
+                furnitureRepository.findById(Mockito.anyInt())
+        ).thenReturn(furniture);
+        Mockito.when(
+                furnitureRepository.save(Mockito.any(Furniture.class))
+        ).thenReturn(furniture.get());
+        Mockito.when(
+                billDetailRepository.save(Mockito.any(BillDetails.class))
+        ).thenReturn(new BillDetails());
+
+        assertEquals(
+                HttpStatus.OK,
+                furnitureServiceImp.putSold(billData).getStatusCode()
+        );
+    }
+
+    @Test
+    public void putSoldFailed(){
+        Optional<Furniture> furniture = Optional.of(new Furniture(1,"",0.0,0.0,new Date(),"","",null,null,0));
+
+        ArrayList<BillDetails> mockedDetails = new ArrayList();
+        mockedDetails.add(new BillDetails(1, null, furniture.get(), 0.0));
+        mockedDetails.add(new BillDetails(2, null, furniture.get(), 0.0));
+        mockedDetails.add(new BillDetails(3, null, furniture.get(), 0.0));
+        BillData billData = new BillData(new Bill(), mockedDetails);
+
+        Mockito.when(
+                furnitureRepository.findById(Mockito.anyInt())
+        ).thenThrow(RuntimeException.class);
+        assertEquals(
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                furnitureServiceImp.putSold(billData).getStatusCode()
+        );
     }
 }
