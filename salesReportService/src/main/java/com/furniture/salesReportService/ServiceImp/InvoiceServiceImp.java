@@ -28,7 +28,6 @@ public class InvoiceServiceImp implements InvoiceService {
         Bill bill = new Bill();
         bill.setId(billId.orElse(0));
         Page<BillDetails> l = this.billDetailsRepository.findAllByBill(bill, PageRequest.of(page.orElse(0),10));
-        System.out.println(l.getContent());
         return l;
     }
 
