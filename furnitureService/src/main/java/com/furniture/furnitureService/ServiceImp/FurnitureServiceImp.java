@@ -131,7 +131,6 @@ public class FurnitureServiceImp implements FurnitureService {
 
     @Override
     public Page<Furniture> getAllFurniture(Optional<Integer> page){
-        List<Furniture> l = this.furnitureRepository.findAll();
         return this.furnitureRepository.findAll(
                 PageRequest.of(
                         page.orElse(0),

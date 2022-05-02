@@ -27,6 +27,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Usuario\Documents\VSCODE" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -35,6 +39,7 @@
         <option value="Interface" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -61,7 +66,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -92,7 +97,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/salesReportService/src/main/java/com/furniture/salesReportService" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -100,18 +107,26 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\salesReportService\src\main\java\com\furniture\salesReportService" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\saleService\src\main\java\com\furniture\saleService" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\reportService\src\main\java\com\furniture\reportService" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\furnitureService\src\main\java\com\furniture\furnitureService" />
-      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\adminService\src\main\java\com\furniture\adminService" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\adminService\src\main\java\com\furniture\adminService\config" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\furnitureService\src\main\java\com\furniture\furnitureService\config" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\inventoryService\src\main\java\com\furniture\inventoryService\config" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\reportService\src\main\java\com\furniture\reportService\config" />
+      <recent name="C:\Users\Soberanis\Documents\Universidad\Analisis y diseño 2\FurniturePhase3\salesReportService\src\main\java\com\furniture\salesReportService\config" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.furniture.reportService.ServiceImp" />
+      <recent name="com.furniture.furnitureService.ServiceImp" />
+      <recent name="com.furniture.salesReportService.ServiceImp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.furniture.salesReportService.config" />
-      <recent name="com.furniture.saleService.config" />
-      <recent name="com.furniture.reportService.config" />
-      <recent name="com.furniture.furnitureService.config" />
-      <recent name="com.furniture.adminService.config" />
+      <recent name="com.furniture.salesReportService.Util" />
+      <recent name="com.furniture.saleService.Util" />
+      <recent name="com.furniture.reportService.Util" />
+      <recent name="com.furniture.inventoryService.Util" />
+      <recent name="com.furniture.furnitureService.Util" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -308,6 +323,11 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in adminService" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillSuccess" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillFailed" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillSuccess" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillFailed" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.AdminServiceApplication" />
       <item itemvalue="Spring Boot.FurnitureServiceApplication" />
@@ -315,11 +335,6 @@
       <item itemvalue="Spring Boot.ReportServiceApplication" />
       <item itemvalue="Spring Boot.SaleServiceApplication" />
       <item itemvalue="Spring Boot.SalesReportServiceApplication" />
-      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillSuccess" />
-      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillFailed" />
-      <item itemvalue="JUnit.FurnitureInBillServiceImpTest" />
-      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillSuccess" />
-      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillFailed" />
     </list>
     <recent_temporary>
       <list>
@@ -334,7 +349,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fb17ba84-3a0c-4209-86d1-4c7603e946b3" name="Changes" comment="" />
+      <changelist id="2683e0f2-3d27-4b7a-9941-9427b1d62c65" name="Changes" comment="" />
       <created>1649466127631</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -352,10 +367,14 @@
       <workItem from="1649874838908" duration="5111000" />
       <workItem from="1649900751636" duration="18259000" />
       <workItem from="1650038929504" duration="3804000" />
+      <workItem from="1650067761942" duration="5000" />
+      <workItem from="1650137401228" duration="955000" />
+      <workItem from="1650415694670" duration="19000" />
+      <workItem from="1650493136232" duration="1101000" />
+      <workItem from="1650694955247" duration="8000" />
+      <workItem from="1650743039943" duration="609000" />
       <workItem from="1650201427282" duration="3393000" />
-      <workItem from="1650938439196" duration="9232000" />
-      <workItem from="1651108577425" duration="4514000" />
-      <workItem from="1651198155346" duration="7104000" />
+      <workItem from="1650908660908" duration="15823000" />
     </task>
     <servers />
   </component>
@@ -363,7 +382,6 @@
     <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="application.properties" />
     <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
     <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
   </component>
@@ -377,23 +395,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/inventoryService/src/main/java/com/furniture/inventoryService/Controller/CategoryController.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="request" />
-        <watch expression="request" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FurniturePhase3$SaleFurnitureServiceImpTest.ic" NAME="SaleFurnitureServiceImpTest Coverage Results" MODIFIED="1650918814796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
