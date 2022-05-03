@@ -20,6 +20,7 @@ public class AssignPlanPieceServiceImp implements AssignPlanPieceService {
     @Override
     public ResponseEntity<String> createAssignments(List<AssignPlanPiece> assignments, Plan plan) {
         for (AssignPlanPiece assignment : assignments) {
+            assignment.setPlan(plan);
             this.assignPlanPieceRepository.save(assignment);
         }
         return ResponseEntity.status(HttpStatus.OK).body("Se ha creado el plan y sus asignaciones correctamente");

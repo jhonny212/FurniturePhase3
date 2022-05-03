@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="fb17ba84-3a0c-4209-86d1-4c7603e946b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/AssignPlanPieceServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/java/com/furniture/adminService/ServiceImp/AssignPlanPieceServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salesReportService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/salesReportService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +129,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FurnitureInBillServiceImpTest">
+  <component name="RunManager" selected="Spring Boot.AdminServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
