@@ -3,7 +3,10 @@ package com.furniture.saleService.Controller;
 import com.furniture.saleService.Model.Bill;
 import com.furniture.saleService.Model.BillData;
 import com.furniture.saleService.Service.BillServiceImp;
+import com.furniture.saleService.Service.ClientServiceImp;
+import com.furniture.saleService.Service.FurnitureServiceImp;
 import com.furniture.saleService.Util.CONST;
+import com.furniture.saleService.config.JWTAuthorizationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -55,6 +58,6 @@ public class BillController {
 
     @PostMapping("bill")
     public ResponseEntity<Bill> doBill(@RequestHeader("Authorization") String token, @RequestBody BillData billData){
-        return this.billServiceImp.doBill(token, billData);
+        return this.billServiceImp.doBill(token, billData, new ClientServiceImp(), new FurnitureServiceImp(), new JWTAuthorizationFilter());
     }
 }

@@ -19,16 +19,15 @@ public class FurnitureInBillServiceImp implements FurnitureInBillService {
 
     @Autowired
     private FurnitureInBillRepository furnitureInBillRepository;
-    private JWTAuthorizationFilter jwt = new JWTAuthorizationFilter();
 
     @Override
-    public ResponseEntity<List<FurnitureInBill>> getFurnituresInBillBySession(String token) {
+    public ResponseEntity<List<FurnitureInBill>> getFurnituresInBillBySession(String token,JWTAuthorizationFilter jwt) {
         Profile profile = jwt.getProfileFromToken(token);
         return ResponseEntity.status(HttpStatus.OK).body(this.furnitureInBillRepository.findByProfile(profile));
     }
 
     @Override
-    public ResponseEntity<Boolean> removeFurnitureFromBill(String token, Integer code) {
+    public ResponseEntity<Boolean> removeFurnitureFromBill(String token, Integer code,JWTAuthorizationFilter jwt) {
         Profile profile = jwt.getProfileFromToken(token);
         FurnitureInBill fib = this.furnitureInBillRepository.findByFurnitureAndProfile(code,profile);
         this.furnitureInBillRepository.delete(fib);
@@ -36,13 +35,15 @@ public class FurnitureInBillServiceImp implements FurnitureInBillService {
     }
 
     @Override
-    public ResponseEntity<Boolean> addFurnitureToBill(FurnitureInBill furnitureInBill) {
+    public ResponseEntity<Boolean> addFurnitureToBill(Furniture furniture, String token, JWTAuthorizationFilter jwt) {
+        Profile profile = jwt.getProfileFromToken(token);
+        FurnitureInBill furnitureInBill = new FurnitureInBill(furniture, profile);
         this.furnitureInBillRepository.save(furnitureInBill);
         return ResponseEntity.status(HttpStatus.OK).body(this.furnitureInBillRepository.existsById(furnitureInBill.getId()));
     }
 
     @Override
-    public ResponseEntity<Boolean> deleteAllFurnituresInBillFromSession(String token) {
+    public ResponseEntity<Boolean> deleteAllFurnituresInBillFromSession(String token,JWTAuthorizationFilter jwt) {
         Profile profile = jwt.getProfileFromToken(token);
         this.furnitureInBillRepository.deleteFurnitureInBillByProfile(profile);
         return ResponseEntity.status(HttpStatus.OK).body(true);

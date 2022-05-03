@@ -85,25 +85,15 @@ public class FurnitureServiceImp implements FurnitureService {
 
     @Override
     public ResponseEntity<Boolean> putFurnitureOnSale(OnSaleData onSaleData){
-        Furniture furniture = this.furnitureRepository.findById(onSaleData.getCode()).orElse(null);
-        if(furniture!=null){
-            furniture.setPrice(onSaleData.getPrice());
-            furniture.setStatus(1);
-            this.furnitureRepository.save(furniture);
+        Optional<Furniture> furniture = this.furnitureRepository.findById(onSaleData.getCode());
+        if(!furniture.isEmpty()){
+            furniture.get().setPrice(onSaleData.getPrice());
+            furniture.get().setStatus(1);
+            this.furnitureRepository.save(furniture.get());
             return ResponseEntity.status(HttpStatus.OK).body(true);
         }else{
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(false);
         }
-    }
-
-    @Override
-    public ResponseEntity<Page<Furniture>> getFurnituresOnSale(Optional<Integer> page, Optional<String> name) {
-        return this.getFurnituresByStatus(page, name, 1);
-    }
-
-    @Override
-    public ResponseEntity<Page<Furniture>> getFurnituresOnStorage(Optional<Integer> page, Optional<String> name) {
-        return this.getFurnituresByStatus(page, name, 0);
     }
 
     public ResponseEntity<Page<Furniture>> getFurnituresByStatus(Optional<Integer> page, Optional<String> name, Integer status){
@@ -117,8 +107,8 @@ public class FurnitureServiceImp implements FurnitureService {
     @Override
     public ResponseEntity<Boolean> verifyOnSale(ArrayList<BillDetails> details) {
         for(BillDetails detail : details){
-            Furniture furniture = this.furnitureRepository.findById(detail.getFurniture().getCode()).orElse(null);
             try{
+                Furniture furniture = this.furnitureRepository.findById(detail.getFurniture().getCode()).orElse(null);
                 if(furniture.getStatus()==0 || furniture.getStatus() == 2) return ResponseEntity.status(HttpStatus.OK).body(false);
             }catch(Exception ex){
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
