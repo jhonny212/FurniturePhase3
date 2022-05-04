@@ -7,6 +7,8 @@ import com.furniture.inventoryService.ServiceImp.PieceServiceImp;
 import com.furniture.inventoryService.Util.Util;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +20,7 @@ import java.util.Optional;
 
 @RestController()
 @RequestMapping("fabricate/piece")
+@EnableCaching
 public class PieceController {
     @Autowired
     private Util util;
@@ -82,6 +85,7 @@ public class PieceController {
         }
         return ResponseEntity.badRequest().body(false);
     }
+
 
     @GetMapping("/get-all")
     public ResponseEntity<Page<Piece>> getAllPieces(@RequestParam Optional<Integer> page, @RequestParam Optional<String> name){

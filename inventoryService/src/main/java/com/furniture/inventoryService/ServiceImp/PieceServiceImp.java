@@ -8,6 +8,9 @@ import com.furniture.inventoryService.Service.PieceService;
 
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
@@ -19,6 +22,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@EnableCaching
 public class PieceServiceImp implements PieceService{
 
     @Autowired
@@ -49,6 +53,7 @@ public class PieceServiceImp implements PieceService{
     }
 
     @Override
+    @Cacheable(key = "#id",value = "piece")
     public Piece getPieceById(Integer id) {
         return pieceRepository.findById(id).orElse(null);
     }

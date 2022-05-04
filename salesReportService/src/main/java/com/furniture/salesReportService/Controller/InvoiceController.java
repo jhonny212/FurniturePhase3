@@ -5,6 +5,7 @@ import com.furniture.salesReportService.Model.BillDetails;
 import com.furniture.salesReportService.ServiceImp.InvoiceServiceImp;
 import com.furniture.salesReportService.ServiceImp.SaleFurnitureServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
