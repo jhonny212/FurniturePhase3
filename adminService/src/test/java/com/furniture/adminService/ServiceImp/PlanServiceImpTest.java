@@ -1,7 +1,9 @@
 package com.furniture.adminService.ServiceImp;
 
+import com.furniture.adminService.Model.AssignPlanPiece;
 import com.furniture.adminService.Model.Plan;
 import com.furniture.adminService.Model.PlanData;
+import com.furniture.adminService.Repository.AssignPlanPieceRepository;
 import com.furniture.adminService.Repository.PlanRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,6 +16,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,6 +26,8 @@ public class PlanServiceImpTest {
 
     @Mock
     PlanRepository planRepository;
+    @Mock
+    AssignPlanPieceRepository assignPlanPieceRepository;
     @Mock
     AssignPlanPieceServiceImp assignPlanPieceServiceImp;
     @InjectMocks
@@ -38,7 +44,7 @@ public class PlanServiceImpTest {
         ).thenReturn(planData.getPlan());
         Mockito.when(
                 assignPlanPieceServiceImp.createAssignments(Mockito.anyList(),Mockito.any(Plan.class))
-        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(""));
+        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(true));
         assertEquals(
                 HttpStatus.OK.value(),
                 planServiceImp.createPlan(planData).getStatusCodeValue()
@@ -85,6 +91,18 @@ public class PlanServiceImpTest {
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(list),
                 this.planServiceImp.getAllPlans(name, page)
+        );
+    }
+
+    @Test
+    public void getPlanPlanAssignPiecesSucces(){
+        List<AssignPlanPiece> list = new ArrayList();
+        Mockito.when(
+                assignPlanPieceRepository.findAllByPlan_Id(Mockito.anyInt())
+        ).thenReturn(list);
+        assertEquals(
+                assignPlanPieceServiceImp.getPlan(1),
+                list
         );
     }
 }

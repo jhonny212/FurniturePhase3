@@ -45,12 +45,12 @@ public class FurnitureServiceImp implements FurnitureService {
             return new ResponseEntity<>(furniture,HttpStatus.BAD_REQUEST);
         }
 
-        if(!file.isEmpty()){
+        /* if(!file.isEmpty()){
             //String nameFile = utilityService.saveFile(file,"src/main/resources/img/");
             //furniture.setPath(nameFile);
         }else{
             furniture.setPath(null);
-        }
+        } */
 
         List<AssignPlanPiece> assignPlanPieces = this.assignPlanPieceRepository.findAllByPlan_Id(Integer.parseInt(plan));
         List<StockPiece> stockPieceList=new ArrayList<>();

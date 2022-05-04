@@ -16,5 +16,5 @@ public interface BillService {
     public Object getClientByIdBill(int id);
     public ResponseEntity<Object> getBestEarner(String initialDate, String finalDate);
     public ResponseEntity<Object> getBestSeller(String initialDate, String finalDate);
-    public ResponseEntity<Bill> doBill(String token, BillData billData, ClientServiceImp clientServiceImp, FurnitureServiceImp furnitureServiceImp, JWTAuthorizationFilter jwt);
+    public ResponseEntity<Bill> doBill(String token, BillData billData);
 }

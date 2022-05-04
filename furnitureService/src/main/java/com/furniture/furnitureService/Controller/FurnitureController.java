@@ -28,11 +28,9 @@ public class FurnitureController {
 
     @PostMapping("/register-furniture")
     public ResponseEntity<Furniture> registerFurniture(
-            @RequestParam("file") MultipartFile file,
-            @RequestParam("code") Integer code,
             @RequestParam("name") String name,
+            @RequestParam("code") String code,
             @RequestParam("price") String price,
-            @RequestParam("cost") String cost,
             @RequestParam("creationDate") String creationDate,
             @RequestParam("description") String description,
             @RequestParam("path") String path,
@@ -45,11 +43,11 @@ public class FurnitureController {
 
         SimpleDateFormat formatter2=new SimpleDateFormat("yyyy-MM-dd");
         Date date2=formatter2.parse(creationDate);
-        Furniture furniture = new Furniture(code, name, Double.parseDouble(price), Double.parseDouble(cost), date2, description, path,
+        Furniture furniture = new Furniture(Integer.parseInt(code), name, Double.parseDouble(price), 0, date2, description, path,
                 new Profile(tmpProfile.getId(), null, null, null, null, null),
                 new Plan(Integer.parseInt(plan), null, null, true), 0);
 
-        return this.furnitureServiceImp.postRegisterFurniture(furniture,file,plan,token);
+        return this.furnitureServiceImp.postRegisterFurniture(furniture,null,plan,token);
     }
 
     @PutMapping("/{id}")

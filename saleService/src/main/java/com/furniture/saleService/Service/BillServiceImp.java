@@ -18,10 +18,15 @@ import java.util.*;
 
 @Service
 public class BillServiceImp implements BillService {
+
     @Autowired
     private BillDetailRepository billDetailRepository;
     @Autowired
     private BillRepository billRepository;
+    @Autowired
+    private ClientServiceImp clientServiceImp;
+    @Autowired
+    private FurnitureServiceImp furnitureServiceImp;
 
     @Override
     public List<Object[]> getDetailBill(int id) {
@@ -69,8 +74,8 @@ public class BillServiceImp implements BillService {
 
     @Override
     @Transactional
-    public ResponseEntity<Bill> doBill(String token, BillData billData,ClientServiceImp clientServiceImp,FurnitureServiceImp furnitureServiceImp,JWTAuthorizationFilter jwt) {
-
+    public ResponseEntity<Bill> doBill(String token, BillData billData) {
+        JWTAuthorizationFilter jwt = new JWTAuthorizationFilter();
         billData.getBill().setDateTime(Utilities.getActualDate());
         billData.getBill().setProfile(jwt.getProfileFromToken(token));
         ResponseEntity<Boolean> createClientIfNotExist = clientServiceImp.createClientIfNotExist(billData.getBill().getClient());

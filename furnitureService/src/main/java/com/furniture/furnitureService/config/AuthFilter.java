@@ -31,6 +31,9 @@ public class AuthFilter extends OncePerRequestFilter {
         HttpEntity<Map<String, Object>> entity = new HttpEntity<>(new HashMap<>(), headers);
         ResponseEntity<Boolean> authenticationResponse = restTemplate.postForEntity("http://localhost:8080/user/verifyJWT", entity, Boolean.class);
 
+        String var = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+        System.out.println(var);
+
         if(!authenticationResponse.getStatusCode().equals(HttpStatus.OK)){
             System.out.println("Hubo un error aparentemente, estamos probando");
             throw new ResponseStatusException(HttpStatus.FORBIDDEN);
