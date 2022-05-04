@@ -24,12 +24,12 @@ public class PlanServiceImp implements PlanService {
 
     @Override
     @Transactional
-    public ResponseEntity<String> createPlan(PlanData planData) {
+    public ResponseEntity<Boolean> createPlan(PlanData planData) {
         try{
             this.planRepository.save(planData.getPlan());
             return this.assignPlanPieceServiceImp.createAssignments(planData.getAssignments(), planData.getPlan());
         }catch(Exception e){
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ha ocurrido un error al crear el plan");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
         }
     }
 

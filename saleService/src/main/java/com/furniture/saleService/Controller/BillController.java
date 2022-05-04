@@ -58,6 +58,6 @@ public class BillController {
 
     @PostMapping("bill")
     public ResponseEntity<Bill> doBill(@RequestHeader("Authorization") String token, @RequestBody BillData billData){
-        return this.billServiceImp.doBill(token, billData, new ClientServiceImp(), new FurnitureServiceImp(), new JWTAuthorizationFilter());
+        return this.billServiceImp.doBill(token, billData);
     }
 }

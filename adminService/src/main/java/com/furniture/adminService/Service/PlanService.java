@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public interface PlanService {
 
-    public ResponseEntity<String> createPlan(PlanData planData);
+    public ResponseEntity<Boolean> createPlan(PlanData planData);
 
     ResponseEntity<Page<Plan>> getAllPlans(Optional<String> name, Optional<Integer> page);
 }

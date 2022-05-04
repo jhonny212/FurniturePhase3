@@ -135,6 +135,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in adminService (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="adminService" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in adminService" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="adminService" />
       <option name="PACKAGE_NAME" value="" />
@@ -160,22 +168,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FurnitureInBillServiceImpTest.addFurnitureFromBillFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saleService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureInBillServiceImpTest" />
-      <option name="METHOD_NAME" value="addFurnitureFromBillFailed" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FurnitureInBillServiceImpTest.addFurnitureFromBillSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saleService" />
       <extension name="coverage">
@@ -192,33 +184,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FurnitureInBillServiceImpTest.removeFurnitureFromBillFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saleService" />
+    <configuration name="PlanServiceImpTest.createPlanComplete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="adminService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
+          <option name="PATTERN" value="com.furniture.adminService.ServiceImp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureInBillServiceImpTest" />
-      <option name="METHOD_NAME" value="removeFurnitureFromBillFailed" />
+      <option name="PACKAGE_NAME" value="com.furniture.adminService.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.adminService.ServiceImp.PlanServiceImpTest" />
+      <option name="METHOD_NAME" value="createPlanComplete" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FurnitureInBillServiceImpTest.removeFurnitureFromBillSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saleService" />
+    <configuration name="PlanServiceImpTest.getPlanPlanAssignPiecesSucces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="adminService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
+          <option name="PATTERN" value="com.furniture.adminService.ServiceImp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureInBillServiceImpTest" />
-      <option name="METHOD_NAME" value="removeFurnitureFromBillSuccess" />
+      <option name="PACKAGE_NAME" value="com.furniture.adminService.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.adminService.ServiceImp.PlanServiceImpTest" />
+      <option name="METHOD_NAME" value="getPlanPlanAssignPiecesSucces" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -310,14 +302,14 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in adminService" />
-      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillSuccess" />
-      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillFailed" />
       <item itemvalue="JUnit.FurnitureInBillServiceImpTest" />
       <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillSuccess" />
-      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillFailed" />
+      <item itemvalue="JUnit.All in adminService (1)" />
+      <item itemvalue="JUnit.PlanServiceImpTest.createPlanComplete" />
+      <item itemvalue="JUnit.PlanServiceImpTest.getPlanPlanAssignPiecesSucces" />
+      <item itemvalue="Spring Boot.FurnitureServiceApplication" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.AdminServiceApplication" />
-      <item itemvalue="Spring Boot.FurnitureServiceApplication" />
       <item itemvalue="Spring Boot.InventoryServiceApplication" />
       <item itemvalue="Spring Boot.ReportServiceApplication" />
       <item itemvalue="Spring Boot.SaleServiceApplication" />
@@ -325,11 +317,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlanServiceImpTest.getPlanPlanAssignPiecesSucces" />
+        <item itemvalue="JUnit.PlanServiceImpTest.createPlanComplete" />
+        <item itemvalue="JUnit.All in adminService (1)" />
         <item itemvalue="JUnit.FurnitureInBillServiceImpTest" />
         <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillSuccess" />
-        <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillFailed" />
-        <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillFailed" />
-        <item itemvalue="JUnit.FurnitureInBillServiceImpTest.removeFurnitureFromBillSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -384,30 +376,51 @@
       </map>
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/BillController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/BillServiceImp.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/ClientServiceImp.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FurniturePhase3$SalesReportServiceApplicationTests.ic" NAME="SalesReportServiceApplicationTests Coverage Results" MODIFIED="1650918885948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.furniture.salesReportService.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/FurniturePhase3$PlanServiceImpTest_getPageOfPlans.ic" NAME="PlanServiceImpTest.getPageOfPlans Coverage Results" MODIFIED="1651121013169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.furniture.adminService.ServiceImp.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/FurniturePhase3$InventoryServiceApplicationTests.ic" NAME="InventoryServiceApplicationTests Coverage Results" MODIFIED="1650493584557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.furniture.inventoryService.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/FurniturePhase3$PlanServiceImpTest.ic" NAME="PlanServiceImpTest Coverage Results" MODIFIED="1651121046841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.furniture.adminService.ServiceImp.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/FurniturePhase3$FurnitureServiceImpTest.ic" NAME="FurnitureServiceImpTest Coverage Results" MODIFIED="1650922924457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.furniture.furnitureService.ServiceImp.*</FILTER>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$SaleFurnitureServiceImpTest.ic" NAME="SaleFurnitureServiceImpTest Coverage Results" MODIFIED="1650918814796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.salesReportService.ServiceImp.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/FurniturePhase3$InvoiceServiceImpTest.ic" NAME="InvoiceServiceImpTest Coverage Results" MODIFIED="1650918782717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.furniture.salesReportService.ServiceImp.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/FurniturePhase3$FurnitureServiceImpTest_postRegisterFurniture.ic" NAME="FurnitureServiceImpTest.postRegisterFurniture Coverage Results" MODIFIED="1650921961658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/FurniturePhase3$SalesReportServiceApplicationTests.ic" NAME="SalesReportServiceApplicationTests Coverage Results" MODIFIED="1650918885948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.salesReportService.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$FurnitureServiceImpTest.ic" NAME="FurnitureServiceImpTest Coverage Results" MODIFIED="1650922924457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.furniture.furnitureService.ServiceImp.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/FurniturePhase3$SaleFurnitureServiceImpTest.ic" NAME="SaleFurnitureServiceImpTest Coverage Results" MODIFIED="1650918814796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.furniture.salesReportService.ServiceImp.*</FILTER>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$InventoryServiceApplicationTests.ic" NAME="InventoryServiceApplicationTests Coverage Results" MODIFIED="1650493584557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.inventoryService.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$PlanServiceImpTest_getPageOfPlans.ic" NAME="PlanServiceImpTest.getPageOfPlans Coverage Results" MODIFIED="1651121013169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.adminService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$PlanServiceImpTest.ic" NAME="PlanServiceImpTest Coverage Results" MODIFIED="1651121046841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.adminService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$FurnitureServiceImpTest_postRegisterFurniture.ic" NAME="FurnitureServiceImpTest.postRegisterFurniture Coverage Results" MODIFIED="1650921961658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.furnitureService.ServiceImp.*</FILTER>
     </SUITE>
   </component>
 </project>
