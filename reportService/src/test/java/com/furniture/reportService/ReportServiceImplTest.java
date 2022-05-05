@@ -8,6 +8,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
@@ -36,12 +38,12 @@ public class ReportServiceImplTest {
         RestTemplate restTemplate = Mockito.mock (RestTemplate.class);
         Object report = new Object();
         Mockito.when(
-                restTemplate.getForEntity(Mockito.anyString(), ArgumentMatchers.<Class<Object>>any())
+                restTemplate.exchange(Mockito.anyString(), Mockito.any(HttpMethod.class), Mockito.any(HttpEntity.class), ArgumentMatchers.<Class<Object>>any())
         ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
         // Caso 1: sin ninguna de las dos fechas
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(report),
-                reportServiceImp.getBestSellerInXPeriod(Optional.empty(), Optional.empty(), restTemplate)
+                reportServiceImp.getBestSellerInXPeriod(Optional.empty(), Optional.empty(), restTemplate, "anyToken")
         );
     }
 
@@ -50,12 +52,11 @@ public class ReportServiceImplTest {
         RestTemplate restTemplate = Mockito.mock (RestTemplate.class);
         Object report = new Object();
         Mockito.when(
-                restTemplate.getForEntity(Mockito.anyString(), ArgumentMatchers.<Class<Object>>any())
-        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
+                restTemplate.exchange(Mockito.anyString(), Mockito.any(HttpMethod.class), Mockito.any(HttpEntity.class), ArgumentMatchers.<Class<Object>>any())        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
         // Caso 2: con la primer fecha
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(report),
-                reportServiceImp.getBestSellerInXPeriod(Optional.of("2022-01-10"), Optional.empty(), restTemplate)
+                reportServiceImp.getBestSellerInXPeriod(Optional.of("2022-01-10"), Optional.empty(), restTemplate, "anyToken")
         );
     }
 
@@ -64,12 +65,11 @@ public class ReportServiceImplTest {
         RestTemplate restTemplate = Mockito.mock (RestTemplate.class);
         Object report = new Object();
         Mockito.when(
-                restTemplate.getForEntity(Mockito.anyString(), ArgumentMatchers.<Class<Object>>any())
-        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
+                restTemplate.exchange(Mockito.anyString(), Mockito.any(HttpMethod.class), Mockito.any(HttpEntity.class), ArgumentMatchers.<Class<Object>>any())        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
         // Caso 3: con la segunda fecha
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(report),
-                reportServiceImp.getBestSellerInXPeriod(Optional.empty(), Optional.of("2022-01-10"), restTemplate)
+                reportServiceImp.getBestSellerInXPeriod(Optional.empty(), Optional.of("2022-01-10"), restTemplate, "anyToken")
         );
     }
 
@@ -78,12 +78,11 @@ public class ReportServiceImplTest {
         RestTemplate restTemplate = Mockito.mock (RestTemplate.class);
         Object report = new Object();
         Mockito.when(
-                restTemplate.getForEntity(Mockito.anyString(), ArgumentMatchers.<Class<Object>>any())
-        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
+                restTemplate.exchange(Mockito.anyString(), Mockito.any(HttpMethod.class), Mockito.any(HttpEntity.class), ArgumentMatchers.<Class<Object>>any())        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
         // Caso 4: con ambas fechas
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(report),
-                reportServiceImp.getBestSellerInXPeriod(Optional.of("2022-01-01"), Optional.of("2022-01-10"), restTemplate)
+                reportServiceImp.getBestSellerInXPeriod(Optional.of("2022-01-01"), Optional.of("2022-01-10"), restTemplate, "anyToken")
         );
     }
 
@@ -92,12 +91,11 @@ public class ReportServiceImplTest {
         RestTemplate restTemplate = Mockito.mock (RestTemplate.class);
         Object report = new Object();
         Mockito.when(
-                restTemplate.getForEntity(Mockito.anyString(), ArgumentMatchers.<Class<Object>>any())
-        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
+                restTemplate.exchange(Mockito.anyString(), Mockito.any(HttpMethod.class), Mockito.any(HttpEntity.class), ArgumentMatchers.<Class<Object>>any())        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
         // Caso 1: sin ninguna de las dos fechas
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(report),
-                reportServiceImp.getBestEarnerInXPeriod(Optional.empty(), Optional.empty(), restTemplate)
+                reportServiceImp.getBestEarnerInXPeriod(Optional.empty(), Optional.empty(), restTemplate, "anyToken")
         );
     }
 
@@ -106,12 +104,11 @@ public class ReportServiceImplTest {
         RestTemplate restTemplate = Mockito.mock (RestTemplate.class);
         Object report = new Object();
         Mockito.when(
-                restTemplate.getForEntity(Mockito.anyString(), ArgumentMatchers.<Class<Object>>any())
-        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
+                restTemplate.exchange(Mockito.anyString(), Mockito.any(HttpMethod.class), Mockito.any(HttpEntity.class), ArgumentMatchers.<Class<Object>>any())        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
         // Caso 2: con la primer fecha
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(report),
-                reportServiceImp.getBestEarnerInXPeriod(Optional.of("2022-01-10"), Optional.empty(), restTemplate)
+                reportServiceImp.getBestEarnerInXPeriod(Optional.of("2022-01-10"), Optional.empty(), restTemplate, "anyToken")
         );
     }
 
@@ -120,12 +117,11 @@ public class ReportServiceImplTest {
         RestTemplate restTemplate = Mockito.mock (RestTemplate.class);
         Object report = new Object();
         Mockito.when(
-                restTemplate.getForEntity(Mockito.anyString(), ArgumentMatchers.<Class<Object>>any())
-        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
+                restTemplate.exchange(Mockito.anyString(), Mockito.any(HttpMethod.class), Mockito.any(HttpEntity.class), ArgumentMatchers.<Class<Object>>any())        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
         // Caso 3: con la segunda fecha
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(report),
-                reportServiceImp.getBestEarnerInXPeriod(Optional.empty(), Optional.of("2022-01-10"), restTemplate)
+                reportServiceImp.getBestEarnerInXPeriod(Optional.empty(), Optional.of("2022-01-10"), restTemplate, "anyToken")
         );
     }
 
@@ -134,12 +130,11 @@ public class ReportServiceImplTest {
         RestTemplate restTemplate = Mockito.mock (RestTemplate.class);
         Object report = new Object();
         Mockito.when(
-                restTemplate.getForEntity(Mockito.anyString(), ArgumentMatchers.<Class<Object>>any())
-        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
+                restTemplate.exchange(Mockito.anyString(), Mockito.any(HttpMethod.class), Mockito.any(HttpEntity.class), ArgumentMatchers.<Class<Object>>any())        ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(report));
         // Caso 4: con ambas fechas
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(report),
-                reportServiceImp.getBestEarnerInXPeriod(Optional.of("2022-01-01"), Optional.of("2022-01-10"), restTemplate)
+                reportServiceImp.getBestEarnerInXPeriod(Optional.of("2022-01-01"), Optional.of("2022-01-10"), restTemplate, "anyToken")
         );
     }
 }

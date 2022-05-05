@@ -144,7 +144,7 @@ public class FurnitureInBillServiceImpTest {
         ).thenReturn(profile);
         Mockito.when(
                 furnitureInBillRepository.existsByFurnitureCodeAndProfile(Mockito.anyInt(),Mockito.any(Profile.class))
-        ).thenReturn(true);
+        ).thenReturn(false);
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(true),
                 furnitureInBillServiceImp.isFurnitureOnSession(1,"anyToken",jwt)
@@ -159,7 +159,7 @@ public class FurnitureInBillServiceImpTest {
         ).thenReturn(profile);
         Mockito.when(
                 furnitureInBillRepository.existsByFurnitureCodeAndProfile(Mockito.anyInt(),Mockito.any(Profile.class))
-        ).thenReturn(false);
+        ).thenReturn(true);
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(false),
                 furnitureInBillServiceImp.isFurnitureOnSession(1,"anyToken",jwt)

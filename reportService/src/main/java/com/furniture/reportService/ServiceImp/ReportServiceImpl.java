@@ -4,16 +4,13 @@ import com.furniture.reportService.Model.Furniture;
 import com.furniture.reportService.Repository.FurnitureRepository;
 import com.furniture.reportService.Service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class ReportServiceImpl implements ReportService {
@@ -22,15 +19,21 @@ public class ReportServiceImpl implements ReportService {
     private FurnitureRepository furnitureRepository;
 
     @Override
-    public ResponseEntity<Object> getBestSellerInXPeriod(Optional<String> initialDate, Optional<String> finalDate, RestTemplate restTemplate) {
-        ResponseEntity<Object> response = restTemplate.getForEntity("http://localhost:8085/sale/bill/best-seller?initialDate="+initialDate.orElse("0001-01-01")+"&finalDate="+finalDate.orElse("2100-01-01"), Object.class);
+    public ResponseEntity<Object> getBestSellerInXPeriod(Optional<String> initialDate, Optional<String> finalDate, RestTemplate restTemplate, String token) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", token);
+        HttpEntity<Map<String, Object>> entity = new HttpEntity<>(new HashMap<>(), headers);
+        ResponseEntity<Object> response = restTemplate.exchange("http://localhost:8085/sale/bill/best-seller?initialDate="+initialDate.orElse("0001-01-01")+"&finalDate="+finalDate.orElse("2100-01-01"), HttpMethod.GET,entity, Object.class);
         if(response.getStatusCode().equals(HttpStatus.OK)) return ResponseEntity.status(HttpStatus.OK).body(response.getBody());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response.getBody());
     }
 
     @Override
-    public ResponseEntity<Object> getBestEarnerInXPeriod(Optional<String> initialDate, Optional<String> finalDate, RestTemplate restTemplate) {
-        ResponseEntity<Object> response = restTemplate.getForEntity("http://localhost:8085/sale/bill/best-earner?initialDate="+initialDate.orElse("0001-01-01")+"&finalDate="+finalDate.orElse("2100-01-01"), Object.class);
+    public ResponseEntity<Object> getBestEarnerInXPeriod(Optional<String> initialDate, Optional<String> finalDate, RestTemplate restTemplate, String token) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", token);
+        HttpEntity<Map<String, Object>> entity = new HttpEntity<>(new HashMap<>(), headers);
+        ResponseEntity<Object> response = restTemplate.exchange("http://localhost:8085/sale/bill/best-earner?initialDate="+initialDate.orElse("0001-01-01")+"&finalDate="+finalDate.orElse("2100-01-01"), HttpMethod.GET,entity, Object.class);
         if(response.getStatusCode().equals(HttpStatus.OK)) return ResponseEntity.status(HttpStatus.OK).body(response.getBody());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response.getBody());
     }

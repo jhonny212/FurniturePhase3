@@ -6,15 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="fb17ba84-3a0c-4209-86d1-4c7603e946b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/BillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/BillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/FurnitureInBillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/FurnitureInBillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Repository/FurnitureInBillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Repository/FurnitureInBillRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/BillServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/BillServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/FurnitureInBillServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/FurnitureInBillServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/BillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/BillService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/FurnitureInBillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/FurnitureInBillService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/BillServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/BillServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/adminService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnitureService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/furnitureService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/Controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/Controller/ReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/Service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/Service/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/ServiceImp/ReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/main/java/com/furniture/reportService/ServiceImp/ReportServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ReportServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportService/src/test/java/com/furniture/reportService/ReportServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/FurnitureInBillServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/FurnitureInBillServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/FurnitureServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/FurnitureServiceImpTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +133,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.com.furniture.saleService.Service in saleService">
+  <component name="RunManager" selected="JUnit.FurnitureServiceImpTest.returnFurnitureWhenEmptyFurniture">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -154,54 +157,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saleService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.BillServiceImpTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BillServiceImpTest.doBillWithClientCreationFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saleService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.BillServiceImpTest" />
-      <option name="METHOD_NAME" value="doBillWithClientCreationFail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BillServiceImpTest.doBillWithNoSaleFurnitures" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saleService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.BillServiceImpTest" />
-      <option name="METHOD_NAME" value="doBillWithNoSaleFurnitures" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FurnitureInBillServiceImpTest.isFurnitureOnSessionTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FurnitureInBillServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saleService" />
       <extension name="coverage">
         <pattern>
@@ -211,13 +167,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
       <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureInBillServiceImpTest" />
-      <option name="METHOD_NAME" value="isFurnitureOnSessionTrue" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.furniture.saleService.Service in saleService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FurnitureServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saleService" />
       <extension name="coverage">
         <pattern>
@@ -226,7 +181,55 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureServiceImpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FurnitureServiceImpTest.returnFurnitureWhenEmptyFurniture" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saleService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureServiceImpTest" />
+      <option name="METHOD_NAME" value="returnFurnitureWhenEmptyFurniture" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reportService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.reportService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.reportService" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.reportService.ReportServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportServiceImplTest.doBestSellerReportWithAnyDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reportService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.reportService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.reportService" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.reportService.ReportServiceImplTest" />
+      <option name="METHOD_NAME" value="doBestSellerReportWithAnyDate" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -324,19 +327,19 @@
       <item itemvalue="Spring Boot.ReportServiceApplication" />
       <item itemvalue="Spring Boot.SaleServiceApplication" />
       <item itemvalue="Spring Boot.SalesReportServiceApplication" />
-      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.isFurnitureOnSessionTrue" />
-      <item itemvalue="JUnit.BillServiceImpTest.doBillWithClientCreationFail" />
-      <item itemvalue="JUnit.BillServiceImpTest.doBillWithNoSaleFurnitures" />
-      <item itemvalue="JUnit.BillServiceImpTest" />
-      <item itemvalue="JUnit.com.furniture.saleService.Service in saleService" />
+      <item itemvalue="JUnit.ReportServiceImplTest.doBestSellerReportWithAnyDate" />
+      <item itemvalue="JUnit.ReportServiceImplTest" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest" />
+      <item itemvalue="JUnit.FurnitureServiceImpTest" />
+      <item itemvalue="JUnit.FurnitureServiceImpTest.returnFurnitureWhenEmptyFurniture" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.furniture.saleService.Service in saleService" />
-        <item itemvalue="JUnit.BillServiceImpTest" />
-        <item itemvalue="JUnit.BillServiceImpTest.doBillWithNoSaleFurnitures" />
-        <item itemvalue="JUnit.BillServiceImpTest.doBillWithClientCreationFail" />
-        <item itemvalue="JUnit.FurnitureInBillServiceImpTest.isFurnitureOnSessionTrue" />
+        <item itemvalue="JUnit.FurnitureServiceImpTest.returnFurnitureWhenEmptyFurniture" />
+        <item itemvalue="JUnit.FurnitureServiceImpTest" />
+        <item itemvalue="JUnit.FurnitureInBillServiceImpTest" />
+        <item itemvalue="JUnit.ReportServiceImplTest" />
+        <item itemvalue="JUnit.ReportServiceImplTest.doBestSellerReportWithAnyDate" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +373,7 @@
       <workItem from="1650201427282" duration="3393000" />
       <workItem from="1650908660908" duration="15823000" />
       <workItem from="1651600822624" duration="130000" />
-      <workItem from="1651711837206" duration="3140000" />
+      <workItem from="1651711837206" duration="7953000" />
     </task>
     <servers />
   </component>
