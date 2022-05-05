@@ -10,9 +10,9 @@ import java.util.List;
 
 public interface FurnitureInBillService {
 
-    public ResponseEntity<List<FurnitureInBill>> getFurnituresInBillBySession(String token, JWTAuthorizationFilter jwt);
-    public ResponseEntity<Boolean> removeFurnitureFromBill(String token, Integer code,JWTAuthorizationFilter jwt);
-    public ResponseEntity<Boolean> addFurnitureToBill(Furniture furniture, String token,JWTAuthorizationFilter jwt);
-    public ResponseEntity<Boolean> deleteAllFurnituresInBillFromSession(String token,JWTAuthorizationFilter jwt);
-
+    ResponseEntity<List<FurnitureInBill>> getFurnituresInBillBySession(String token, JWTAuthorizationFilter jwt);
+    ResponseEntity<Boolean> removeFurnitureFromBill(String token, Integer code,JWTAuthorizationFilter jwt);
+    ResponseEntity<Boolean> addFurnitureToBill(Furniture furniture, String token,JWTAuthorizationFilter jwt);
+    ResponseEntity<Boolean> deleteAllFurnituresInBillFromSession(String token,JWTAuthorizationFilter jwt);
+    ResponseEntity<Boolean> isFurnitureOnSession(Integer code, String token,JWTAuthorizationFilter jwt);
 }

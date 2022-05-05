@@ -38,4 +38,8 @@ public class FurnitureInBillController {
         return this.furnitureInBillServiceImp.addFurnitureToBill(furniture, token, new JWTAuthorizationFilter());
     }
 
+    @GetMapping("/is-on-session/{code}")
+    public ResponseEntity<Boolean> isFurnitureOnSession(@PathVariable Integer code, @RequestHeader("Authorization") String token){
+        return this.furnitureInBillServiceImp.isFurnitureOnSession(code, token, new JWTAuthorizationFilter());
+    }
 }

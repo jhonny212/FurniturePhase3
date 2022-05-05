@@ -135,7 +135,7 @@ class BillServiceImpTest {
         ).thenReturn(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false));
         assertEquals(
                 HttpStatus.FAILED_DEPENDENCY,
-                billServiceImp.doBill("anyToken",billData).getStatusCode()
+                billServiceImp.doBill("anyToken",billData, jwt).getStatusCode()
         );
     }
 
@@ -154,7 +154,7 @@ class BillServiceImpTest {
         ).thenReturn(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false));
         assertEquals(
                 HttpStatus.PRECONDITION_FAILED,
-                billServiceImp.doBill("anyToken",billData).getStatusCode()
+                billServiceImp.doBill("anyToken",billData, jwt).getStatusCode()
         );
     }
 
@@ -179,7 +179,7 @@ class BillServiceImpTest {
         ).thenReturn(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false));
         assertEquals(
                 HttpStatus.INTERNAL_SERVER_ERROR,
-                billServiceImp.doBill("anyToken",billData).getStatusCode()
+                billServiceImp.doBill("anyToken",billData, jwt).getStatusCode()
         );
     }
 
@@ -204,7 +204,7 @@ class BillServiceImpTest {
         ).thenReturn(ResponseEntity.status(HttpStatus.OK).body(true));
         assertEquals(
                 HttpStatus.OK,
-                billServiceImp.doBill("anyToken",billData).getStatusCode()
+                billServiceImp.doBill("anyToken",billData, jwt).getStatusCode()
         );
     }
 }

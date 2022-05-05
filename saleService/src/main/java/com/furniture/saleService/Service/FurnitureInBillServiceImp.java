@@ -29,7 +29,7 @@ public class FurnitureInBillServiceImp implements FurnitureInBillService {
     @Override
     public ResponseEntity<Boolean> removeFurnitureFromBill(String token, Integer code,JWTAuthorizationFilter jwt) {
         Profile profile = jwt.getProfileFromToken(token);
-        FurnitureInBill fib = this.furnitureInBillRepository.findByFurnitureAndProfile(code,profile);
+        FurnitureInBill fib = this.furnitureInBillRepository.findByFurnitureCodeAndProfile(code,profile);
         this.furnitureInBillRepository.delete(fib);
         return ResponseEntity.status(HttpStatus.OK).body(!this.furnitureInBillRepository.existsById(code));
     }
@@ -47,5 +47,13 @@ public class FurnitureInBillServiceImp implements FurnitureInBillService {
         Profile profile = jwt.getProfileFromToken(token);
         this.furnitureInBillRepository.deleteFurnitureInBillByProfile(profile);
         return ResponseEntity.status(HttpStatus.OK).body(true);
+    }
+
+    @Override
+    public ResponseEntity<Boolean> isFurnitureOnSession(Integer code, String token,JWTAuthorizationFilter jwt) {
+        Profile profile = jwt.getProfileFromToken(token);
+        return ResponseEntity.status(HttpStatus.OK).body(
+                !this.furnitureInBillRepository.existsByFurnitureCodeAndProfile(code, profile)
+        );
     }
 }
