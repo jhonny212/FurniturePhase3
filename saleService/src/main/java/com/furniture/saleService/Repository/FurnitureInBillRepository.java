@@ -10,9 +10,10 @@ import java.util.List;
 
 public interface FurnitureInBillRepository extends JpaRepository<FurnitureInBill, Integer> {
 
-    public FurnitureInBill findByFurnitureAndProfile(Integer code, Profile profile);
+    public FurnitureInBill findByFurnitureCodeAndProfile(Integer code, Profile profile);
     public List<FurnitureInBill> findByProfile(Profile profile);
     @Transactional
     public void deleteFurnitureInBillByProfile(Profile profile);
+    boolean existsByFurnitureCodeAndProfile(Integer code, Profile profile);
 
 }

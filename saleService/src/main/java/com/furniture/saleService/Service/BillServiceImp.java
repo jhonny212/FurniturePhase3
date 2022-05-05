@@ -74,8 +74,7 @@ public class BillServiceImp implements BillService {
 
     @Override
     @Transactional
-    public ResponseEntity<Bill> doBill(String token, BillData billData) {
-        JWTAuthorizationFilter jwt = new JWTAuthorizationFilter();
+    public ResponseEntity<Bill> doBill(String token, BillData billData, JWTAuthorizationFilter jwt) {
         billData.getBill().setDateTime(Utilities.getActualDate());
         billData.getBill().setProfile(jwt.getProfileFromToken(token));
         ResponseEntity<Boolean> createClientIfNotExist = clientServiceImp.createClientIfNotExist(billData.getBill().getClient());

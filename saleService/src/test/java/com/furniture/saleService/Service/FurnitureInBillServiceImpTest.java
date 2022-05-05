@@ -54,7 +54,7 @@ public class FurnitureInBillServiceImpTest {
                 jwt.getProfileFromToken(Mockito.anyString())
         ).thenReturn(profile);
         Mockito.when(
-                furnitureInBillRepository.findByFurnitureAndProfile(Mockito.anyInt(), Mockito.any(Profile.class))
+                furnitureInBillRepository.findByFurnitureCodeAndProfile(Mockito.anyInt(), Mockito.any(Profile.class))
         ).thenReturn(furnitureInBill);
         Mockito.when(
                 furnitureInBillRepository.existsById(Mockito.anyInt())
@@ -73,7 +73,7 @@ public class FurnitureInBillServiceImpTest {
                 jwt.getProfileFromToken(Mockito.anyString())
         ).thenReturn(profile);
         Mockito.when(
-                furnitureInBillRepository.findByFurnitureAndProfile(Mockito.anyInt(), Mockito.any(Profile.class))
+                furnitureInBillRepository.findByFurnitureCodeAndProfile(Mockito.anyInt(), Mockito.any(Profile.class))
         ).thenReturn(furnitureInBill);
         Mockito.when(
                 furnitureInBillRepository.existsById(Mockito.anyInt())
@@ -133,6 +133,36 @@ public class FurnitureInBillServiceImpTest {
         assertEquals(
                 ResponseEntity.status(HttpStatus.OK).body(true),
                 furnitureInBillServiceImp.deleteAllFurnituresInBillFromSession("anyToken", jwt)
+        );
+    }
+
+    @Test
+    public void isFurnitureOnSessionTrue(){
+        Profile profile = new Profile();
+        Mockito.when(
+                jwt.getProfileFromToken(Mockito.anyString())
+        ).thenReturn(profile);
+        Mockito.when(
+                furnitureInBillRepository.existsByFurnitureCodeAndProfile(Mockito.anyInt(),Mockito.any(Profile.class))
+        ).thenReturn(true);
+        assertEquals(
+                ResponseEntity.status(HttpStatus.OK).body(true),
+                furnitureInBillServiceImp.isFurnitureOnSession(1,"anyToken",jwt)
+        );
+    }
+
+    @Test
+    public void isFurnitureOnSessionFalse(){
+        Profile profile = new Profile();
+        Mockito.when(
+                jwt.getProfileFromToken(Mockito.anyString())
+        ).thenReturn(profile);
+        Mockito.when(
+                furnitureInBillRepository.existsByFurnitureCodeAndProfile(Mockito.anyInt(),Mockito.any(Profile.class))
+        ).thenReturn(false);
+        assertEquals(
+                ResponseEntity.status(HttpStatus.OK).body(false),
+                furnitureInBillServiceImp.isFurnitureOnSession(1,"anyToken",jwt)
         );
     }
 }

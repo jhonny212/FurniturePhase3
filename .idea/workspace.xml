@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="fb17ba84-3a0c-4209-86d1-4c7603e946b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/BillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/BillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/FurnitureInBillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Controller/FurnitureInBillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Repository/FurnitureInBillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Repository/FurnitureInBillRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/BillServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/BillServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/FurnitureInBillServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/FurnitureInBillServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/BillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/BillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/FurnitureInBillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/ServiceImp/FurnitureInBillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/BillServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/BillServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/FurnitureInBillServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/saleService/src/test/java/com/furniture/saleService/Service/FurnitureInBillServiceImpTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +130,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AdminServiceApplication">
+  <component name="RunManager" selected="JUnit.com.furniture.saleService.Service in saleService">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -131,14 +140,6 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in adminService (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="adminService" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,7 +154,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FurnitureInBillServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BillServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saleService" />
       <extension name="coverage">
         <pattern>
@@ -162,13 +163,45 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureInBillServiceImpTest" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.BillServiceImpTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FurnitureInBillServiceImpTest.addFurnitureFromBillSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BillServiceImpTest.doBillWithClientCreationFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saleService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.BillServiceImpTest" />
+      <option name="METHOD_NAME" value="doBillWithClientCreationFail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BillServiceImpTest.doBillWithNoSaleFurnitures" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saleService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
+      <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.BillServiceImpTest" />
+      <option name="METHOD_NAME" value="doBillWithNoSaleFurnitures" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FurnitureInBillServiceImpTest.isFurnitureOnSessionTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saleService" />
       <extension name="coverage">
         <pattern>
@@ -178,40 +211,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
       <option name="MAIN_CLASS_NAME" value="com.furniture.saleService.Service.FurnitureInBillServiceImpTest" />
-      <option name="METHOD_NAME" value="addFurnitureFromBillSuccess" />
+      <option name="METHOD_NAME" value="isFurnitureOnSessionTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlanServiceImpTest.createPlanComplete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="adminService" />
+    <configuration name="com.furniture.saleService.Service in saleService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saleService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.furniture.adminService.ServiceImp.*" />
+          <option name="PATTERN" value="com.furniture.saleService.Service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.adminService.ServiceImp" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.adminService.ServiceImp.PlanServiceImpTest" />
-      <option name="METHOD_NAME" value="createPlanComplete" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlanServiceImpTest.getPlanPlanAssignPiecesSucces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="adminService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.furniture.adminService.ServiceImp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.furniture.adminService.ServiceImp" />
-      <option name="MAIN_CLASS_NAME" value="com.furniture.adminService.ServiceImp.PlanServiceImpTest" />
-      <option name="METHOD_NAME" value="getPlanPlanAssignPiecesSucces" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.furniture.saleService.Service" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -302,11 +317,6 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in adminService" />
-      <item itemvalue="JUnit.FurnitureInBillServiceImpTest" />
-      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillSuccess" />
-      <item itemvalue="JUnit.All in adminService (1)" />
-      <item itemvalue="JUnit.PlanServiceImpTest.createPlanComplete" />
-      <item itemvalue="JUnit.PlanServiceImpTest.getPlanPlanAssignPiecesSucces" />
       <item itemvalue="Spring Boot.FurnitureServiceApplication" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.AdminServiceApplication" />
@@ -314,14 +324,19 @@
       <item itemvalue="Spring Boot.ReportServiceApplication" />
       <item itemvalue="Spring Boot.SaleServiceApplication" />
       <item itemvalue="Spring Boot.SalesReportServiceApplication" />
+      <item itemvalue="JUnit.FurnitureInBillServiceImpTest.isFurnitureOnSessionTrue" />
+      <item itemvalue="JUnit.BillServiceImpTest.doBillWithClientCreationFail" />
+      <item itemvalue="JUnit.BillServiceImpTest.doBillWithNoSaleFurnitures" />
+      <item itemvalue="JUnit.BillServiceImpTest" />
+      <item itemvalue="JUnit.com.furniture.saleService.Service in saleService" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlanServiceImpTest.getPlanPlanAssignPiecesSucces" />
-        <item itemvalue="JUnit.PlanServiceImpTest.createPlanComplete" />
-        <item itemvalue="JUnit.All in adminService (1)" />
-        <item itemvalue="JUnit.FurnitureInBillServiceImpTest" />
-        <item itemvalue="JUnit.FurnitureInBillServiceImpTest.addFurnitureFromBillSuccess" />
+        <item itemvalue="JUnit.com.furniture.saleService.Service in saleService" />
+        <item itemvalue="JUnit.BillServiceImpTest" />
+        <item itemvalue="JUnit.BillServiceImpTest.doBillWithNoSaleFurnitures" />
+        <item itemvalue="JUnit.BillServiceImpTest.doBillWithClientCreationFail" />
+        <item itemvalue="JUnit.FurnitureInBillServiceImpTest.isFurnitureOnSessionTrue" />
       </list>
     </recent_temporary>
   </component>
@@ -355,6 +370,7 @@
       <workItem from="1650201427282" duration="3393000" />
       <workItem from="1650908660908" duration="15823000" />
       <workItem from="1651600822624" duration="130000" />
+      <workItem from="1651711837206" duration="3140000" />
     </task>
     <servers />
   </component>
@@ -384,16 +400,6 @@
           <line>60</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/BillServiceImp.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/saleService/src/main/java/com/furniture/saleService/Service/ClientServiceImp.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -403,6 +409,12 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/FurniturePhase3$InvoiceServiceImpTest.ic" NAME="InvoiceServiceImpTest Coverage Results" MODIFIED="1650918782717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.furniture.salesReportService.ServiceImp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$BillServiceImpTest.ic" NAME="BillServiceImpTest Coverage Results" MODIFIED="1651713234473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.saleService.Service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/FurniturePhase3$com_furniture_saleService_Service_in_saleService.ic" NAME="com.furniture.saleService.Service in saleService Coverage Results" MODIFIED="1651713340730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.furniture.saleService.Service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/FurniturePhase3$SalesReportServiceApplicationTests.ic" NAME="SalesReportServiceApplicationTests Coverage Results" MODIFIED="1650918885948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.furniture.salesReportService.*</FILTER>
